@@ -1,0 +1,18 @@
+/* =========================================================================
+   Yakiyaki: solo se carga con JavaScript apagado (desde <noscript> en
+   index.html). La carta, los precios y el pedido se arman con JavaScript;
+   sin él esas partes quedarían vacías, así que se esconden y queda el
+   aviso con el WhatsApp del local.
+   ========================================================================= */
+main,
+.pie,
+.barra-pedido,
+.saltar,
+.cabecera__nav,
+.cabecera__menu,
+.cabecera__pedir { display: none !important; }
+
+.sin-js {
+  padding-block: var(--esp-7);
+  font-size: var(--texto-l);
+}

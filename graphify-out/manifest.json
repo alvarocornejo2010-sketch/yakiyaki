@@ -1,0 +1,380 @@
+{
+  ".claude/launch.json": {
+    "mtime": 1791257890.157428,
+    "seen": 1791294563.0073066,
+    "ast_hash": "25688ba99070b32d5030609778214f6e",
+    "semantic_hash": "25688ba99070b32d5030609778214f6e"
+  },
+  "data/carta.js": {
+    "mtime": 1791255849.741505,
+    "seen": 1791294563.0073116,
+    "ast_hash": "758211d988884dd5931e3aba3ed97396",
+    "semantic_hash": "758211d988884dd5931e3aba3ed97396"
+  },
+  "data/negocio.js": {
+    "mtime": 1791259624.5185063,
+    "seen": 1791294563.0073137,
+    "ast_hash": "c1143a24eaf92e81edf03c86934a3640",
+    "semantic_hash": "c1143a24eaf92e81edf03c86934a3640"
+  },
+  "herramientas/auditar-navegador.js": {
+    "mtime": 1791260208.27399,
+    "seen": 1791294563.0073144,
+    "ast_hash": "13533e20ac93efee6599b489eb851855",
+    "semantic_hash": "13533e20ac93efee6599b489eb851855"
+  },
+  "herramientas/publicar.py": {
+    "mtime": 1791259782.7464786,
+    "seen": 1791294563.0073154,
+    "ast_hash": "457860f604d12f8f10256edcdc91c67f",
+    "semantic_hash": "457860f604d12f8f10256edcdc91c67f"
+  },
+  "herramientas/revisar.py": {
+    "mtime": 1791259782.7454967,
+    "seen": 1791294563.007316,
+    "ast_hash": "14a120d66892a7cb53e0677776c6be67",
+    "semantic_hash": "14a120d66892a7cb53e0677776c6be67"
+  },
+  "herramientas/servidor.py": {
+    "mtime": 1791257778.255959,
+    "seen": 1791294563.007317,
+    "ast_hash": "077d17b7086cc72cdebe7d04fd183cf4",
+    "semantic_hash": "077d17b7086cc72cdebe7d04fd183cf4"
+  },
+  "js/componentes.js": {
+    "mtime": 1791258824.5616086,
+    "seen": 1791294563.007318,
+    "ast_hash": "7b33366fb3a7383e05937dbc1e313685",
+    "semantic_hash": "7b33366fb3a7383e05937dbc1e313685"
+  },
+  "js/muestra.js": {
+    "mtime": 1791231670.272357,
+    "seen": 1791294563.0073187,
+    "ast_hash": "22f01ba9c6fffccb44026d56dce6329b",
+    "semantic_hash": "22f01ba9c6fffccb44026d56dce6329b"
+  },
+  "js/pedido.js": {
+    "mtime": 1791258824.5606067,
+    "seen": 1791294563.0073195,
+    "ast_hash": "9c7c56e867acdae36d9ffcf9b7435417",
+    "semantic_hash": "9c7c56e867acdae36d9ffcf9b7435417"
+  },
+  "js/sitio.js": {
+    "mtime": 1791258824.5666125,
+    "seen": 1791294563.0073204,
+    "ast_hash": "1f862271e48da27a4a54744501e050ac",
+    "semantic_hash": "1f862271e48da27a4a54744501e050ac"
+  },
+  "docs/carta-y-datos.md": {
+    "mtime": 1791256755.1787705,
+    "seen": 1791294563.0073214,
+    "ast_hash": "a49e13dd6bb8a18650bc2f9773d93a7e",
+    "semantic_hash": "a49e13dd6bb8a18650bc2f9773d93a7e"
+  },
+  "docs/como-editar.md": {
+    "mtime": 1791260521.251861,
+    "seen": 1791294563.007322,
+    "ast_hash": "c03fb109b72cea423921f02cd296940a",
+    "semantic_hash": "c03fb109b72cea423921f02cd296940a"
+  },
+  "docs/fase-a-estrategia.md": {
+    "mtime": 1791255107.7424657,
+    "seen": 1791294563.0073228,
+    "ast_hash": "d786b28c1911a36a87de5648f1ce5334",
+    "semantic_hash": "d786b28c1911a36a87de5648f1ce5334"
+  },
+  "docs/fase-b-sistema-visual.md": {
+    "mtime": 1791235374.4984777,
+    "seen": 1791294563.0073237,
+    "ast_hash": "b752d8f19cdd2ed3143f1f10308a3dfb",
+    "semantic_hash": "b752d8f19cdd2ed3143f1f10308a3dfb"
+  },
+  "docs/seguridad.md": {
+    "mtime": 1791260505.052766,
+    "seen": 1791294563.0073245,
+    "ast_hash": "c6b5fc71cdfaaac7c75804693a010c4d",
+    "semantic_hash": "c6b5fc71cdfaaac7c75804693a010c4d"
+  },
+  "docs/yakiyaki-investigacion-y-prompt-web.md": {
+    "mtime": 1791227094.4463458,
+    "seen": 1791294563.0073252,
+    "ast_hash": "8ad9d85eabdbf52cee6025b5e2cb7b97",
+    "semantic_hash": "8ad9d85eabdbf52cee6025b5e2cb7b97"
+  },
+  "index.html": {
+    "mtime": 1791259449.4427884,
+    "seen": 1791294563.007326,
+    "ast_hash": "b008880d936d2e0546ef678d5ac5e10e",
+    "semantic_hash": "b008880d936d2e0546ef678d5ac5e10e"
+  },
+  "muestra-componentes.html": {
+    "mtime": 1791235803.3775897,
+    "seen": 1791294563.0073266,
+    "ast_hash": "79a230b4e5cef29dbe6fabdf455ba4e3",
+    "semantic_hash": "79a230b4e5cef29dbe6fabdf455ba4e3"
+  },
+  "docs/YAKI YAKI.pdf": {
+    "mtime": 1791229087.1342375,
+    "seen": 1791294563.0073276,
+    "ast_hash": "2e13660a95acc5b7edd6f3aac390a1a8",
+    "semantic_hash": "2e13660a95acc5b7edd6f3aac390a1a8"
+  },
+  "docs/capturas/cabecera-1-estado-y-direccion.png": {
+    "mtime": 1791254881.0926907,
+    "seen": 1791294563.0073283,
+    "ast_hash": "8515d9252040d24b8136da1967039553",
+    "semantic_hash": "8515d9252040d24b8136da1967039553"
+  },
+  "docs/capturas/cabecera-2-promo.png": {
+    "mtime": 1791259631.9805758,
+    "seen": 1791294563.007329,
+    "ast_hash": "c2a2f9ca50d1e50ba346281da6c9d584",
+    "semantic_hash": "c2a2f9ca50d1e50ba346281da6c9d584"
+  },
+  "docs/capturas/cabecera-3-nombre.png": {
+    "mtime": 1791254934.20483,
+    "seen": 1791294563.0073304,
+    "ast_hash": "9927151e3ecef706b627090b2481597e",
+    "semantic_hash": "9927151e3ecef706b627090b2481597e"
+  },
+  "docs/capturas/pedido-1-tu-pedido.png": {
+    "mtime": 1791256350.7391822,
+    "seen": 1791294563.0073311,
+    "ast_hash": "bd23daad9c17a157921f00e65ec364de",
+    "semantic_hash": "bd23daad9c17a157921f00e65ec364de"
+  },
+  "docs/capturas/pedido-2-total-y-enviar.png": {
+    "mtime": 1791256407.9551485,
+    "seen": 1791294563.0073318,
+    "ast_hash": "799af1e552d900a3919f7ecc487e8b89",
+    "semantic_hash": "799af1e552d900a3919f7ecc487e8b89"
+  },
+  "docs/capturas/pedido-3-carta-con-agregar.png": {
+    "mtime": 1791256492.8044293,
+    "seen": 1791294563.0073326,
+    "ast_hash": "52dd34ddfae8d26341c6d6e4d584f002",
+    "semantic_hash": "52dd34ddfae8d26341c6d6e4d584f002"
+  },
+  "docs/capturas/pedido-4-elegir-opciones.png": {
+    "mtime": 1791256512.9963965,
+    "seen": 1791294563.0073333,
+    "ast_hash": "76b536cb643b261c1be939e8f5e70ef5",
+    "semantic_hash": "76b536cb643b261c1be939e8f5e70ef5"
+  },
+  "docs/capturas/pedido-5-celular-agregado.png": {
+    "mtime": 1791256561.419171,
+    "seen": 1791294563.0073342,
+    "ast_hash": "35f51e16f6e20fb1d1937d234c59c643",
+    "semantic_hash": "35f51e16f6e20fb1d1937d234c59c643"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141735 (1).png": {
+    "mtime": 1791229279.9752862,
+    "seen": 1791294563.007335,
+    "ast_hash": "97b5d723bd0cc3bee8b267a599264d43",
+    "semantic_hash": "97b5d723bd0cc3bee8b267a599264d43"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141735.png": {
+    "mtime": 1791229175.5905483,
+    "seen": 1791294563.007336,
+    "ast_hash": "97b5d723bd0cc3bee8b267a599264d43",
+    "semantic_hash": "97b5d723bd0cc3bee8b267a599264d43"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141745.png": {
+    "mtime": 1791229183.8162816,
+    "seen": 1791294563.0073366,
+    "ast_hash": "d0db496ceb410dd0cb18e1ecfb4e0b9f",
+    "semantic_hash": "d0db496ceb410dd0cb18e1ecfb4e0b9f"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141755.png": {
+    "mtime": 1791229182.3766272,
+    "seen": 1791294563.0073376,
+    "ast_hash": "eccf115ff056566331931fb923fe1687",
+    "semantic_hash": "eccf115ff056566331931fb923fe1687"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141803.png": {
+    "mtime": 1791229197.8490858,
+    "seen": 1791294563.0073383,
+    "ast_hash": "a5a780eed05c48292396d20f54aaff46",
+    "semantic_hash": "a5a780eed05c48292396d20f54aaff46"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141843.png": {
+    "mtime": 1791229167.6430318,
+    "seen": 1791294563.007339,
+    "ast_hash": "f315e90838739ecdc00494caf4098544",
+    "semantic_hash": "f315e90838739ecdc00494caf4098544"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 141854.png": {
+    "mtime": 1791229177.3378665,
+    "seen": 1791294563.0073397,
+    "ast_hash": "dc67ff01c1637fa8e8fc4d3b673f3a48",
+    "semantic_hash": "dc67ff01c1637fa8e8fc4d3b673f3a48"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 142811.png": {
+    "mtime": 1791228491.5832555,
+    "seen": 1791294563.007341,
+    "ast_hash": "83a368bc3f364b1078e65e8cb1c13679",
+    "semantic_hash": "83a368bc3f364b1078e65e8cb1c13679"
+  },
+  "docs/fotos/Captura de pantalla 2026-10-05 142822.png": {
+    "mtime": 1791228502.5013213,
+    "seen": 1791294563.0073416,
+    "ast_hash": "1a0a9e3caada761d264ae325f6cfcbb0",
+    "semantic_hash": "1a0a9e3caada761d264ae325f6cfcbb0"
+  },
+  "docs/fotos/combos-y-productos/foto-karaage-sweet-chili.webp": {
+    "mtime": 1791234544.5325313,
+    "seen": 1791294563.007342,
+    "ast_hash": "8f9cc5215dd85c6eb614eb623135ed3d",
+    "semantic_hash": "8f9cc5215dd85c6eb614eb623135ed3d"
+  },
+  "docs/fotos/combos-y-productos/foto-onigiri-nori.webp": {
+    "mtime": 1791234544.560308,
+    "seen": 1791294563.007343,
+    "ast_hash": "de41fe61e77dc991382c0295252a1339",
+    "semantic_hash": "de41fe61e77dc991382c0295252a1339"
+  },
+  "docs/fotos/combos-y-productos/foto-taiyaki.webp": {
+    "mtime": 1791234544.4769654,
+    "seen": 1791294563.0073435,
+    "ast_hash": "2ac78cb8c5b7844baec399dc6539f7f4",
+    "semantic_hash": "2ac78cb8c5b7844baec399dc6539f7f4"
+  },
+  "docs/fotos/combos-y-productos/foto-takoyaki.webp": {
+    "mtime": 1791234544.4490974,
+    "seen": 1791294563.0073445,
+    "ast_hash": "34bab2a6962e779de62ac9fe5045f10b",
+    "semantic_hash": "34bab2a6962e779de62ac9fe5045f10b"
+  },
+  "docs/fotos/combos-y-productos/foto-yakimeshi.webp": {
+    "mtime": 1791234544.5068805,
+    "seen": 1791294563.0073452,
+    "ast_hash": "4d19422300f5630b8659b48580f64948",
+    "semantic_hash": "4d19422300f5630b8659b48580f64948"
+  },
+  "docs/fotos/combos-y-productos/poster-combo-agosto.webp": {
+    "mtime": 1791234544.30345,
+    "seen": 1791294563.0073462,
+    "ast_hash": "130b488e3640bac8a01c9d1fea8249e8",
+    "semantic_hash": "130b488e3640bac8a01c9d1fea8249e8"
+  },
+  "docs/fotos/combos-y-productos/poster-combo-dos.webp": {
+    "mtime": 1791234544.331194,
+    "seen": 1791294563.007347,
+    "ast_hash": "20c880c248d92d8b3e0f6d5c4b802227",
+    "semantic_hash": "20c880c248d92d8b3e0f6d5c4b802227"
+  },
+  "docs/fotos/combos-y-productos/poster-combo-uno.webp": {
+    "mtime": 1791234544.3652513,
+    "seen": 1791294563.007348,
+    "ast_hash": "29b36a94e7e3b2f53a61929bc37e1d75",
+    "semantic_hash": "29b36a94e7e3b2f53a61929bc37e1d75"
+  },
+  "docs/fotos/combos-y-productos/poster-yakibox.webp": {
+    "mtime": 1791234544.421428,
+    "seen": 1791294563.0073488,
+    "ast_hash": "86a417718d2817d2ab08ae90a7dadefe",
+    "semantic_hash": "86a417718d2817d2ab08ae90a7dadefe"
+  },
+  "docs/fotos/combos-y-productos/poster-yakimix.webp": {
+    "mtime": 1791234544.3952172,
+    "seen": 1791294563.0073495,
+    "ast_hash": "85288146822c4259c9df60a05e85fa2e",
+    "semantic_hash": "85288146822c4259c9df60a05e85fa2e"
+  },
+  "img/carta/ebi-furai.webp": {
+    "mtime": 1791235803.2803874,
+    "seen": 1791294563.0073502,
+    "ast_hash": "f16e24c5fe506942bd0df04bbeca19d5",
+    "semantic_hash": "f16e24c5fe506942bd0df04bbeca19d5"
+  },
+  "img/carta/gohan-nori.webp": {
+    "mtime": 1791235802.5311012,
+    "seen": 1791294563.0073514,
+    "ast_hash": "9d223bc27a03021dfd69e7c0fd5d9b18",
+    "semantic_hash": "9d223bc27a03021dfd69e7c0fd5d9b18"
+  },
+  "img/carta/gohan-yakimeshi.webp": {
+    "mtime": 1791235802.6527848,
+    "seen": 1791294563.0073519,
+    "ast_hash": "4a178edb779bfaacd6acbc213b22d8ea",
+    "semantic_hash": "4a178edb779bfaacd6acbc213b22d8ea"
+  },
+  "img/carta/gyozas.webp": {
+    "mtime": 1791235803.2507205,
+    "seen": 1791294563.0073526,
+    "ast_hash": "d8c442ade03a5bab7d6c35c7536153f8",
+    "semantic_hash": "d8c442ade03a5bab7d6c35c7536153f8"
+  },
+  "img/carta/karaage-sweet-chili.webp": {
+    "mtime": 1791235802.7661328,
+    "seen": 1791294563.0073535,
+    "ast_hash": "8f2dbb7d43367c63c50aae642b395966",
+    "semantic_hash": "8f2dbb7d43367c63c50aae642b395966"
+  },
+  "img/carta/poster-combo-dos.webp": {
+    "mtime": 1791235803.0077806,
+    "seen": 1791294563.007354,
+    "ast_hash": "0ac496d6d7ba6d413d96c8f9215727d2",
+    "semantic_hash": "0ac496d6d7ba6d413d96c8f9215727d2"
+  },
+  "img/carta/poster-combo-uno.webp": {
+    "mtime": 1791235802.888678,
+    "seen": 1791294563.007355,
+    "ast_hash": "64e348df984611084cf5d4027a79eb6f",
+    "semantic_hash": "64e348df984611084cf5d4027a79eb6f"
+  },
+  "img/carta/poster-yakimix.webp": {
+    "mtime": 1791235803.1283832,
+    "seen": 1791294563.007356,
+    "ast_hash": "e63425de877eed6b96201d3f34162b6f",
+    "semantic_hash": "e63425de877eed6b96201d3f34162b6f"
+  },
+  "img/carta/ramen-cerca.webp": {
+    "mtime": 1791236997.9046178,
+    "seen": 1791294563.0073564,
+    "ast_hash": "fca94e158f1019111af86a2b6fc1105b",
+    "semantic_hash": "fca94e158f1019111af86a2b6fc1105b"
+  },
+  "img/carta/ramen.webp": {
+    "mtime": 1791235803.316946,
+    "seen": 1791294563.0073571,
+    "ast_hash": "504e3df9b5e6a32693dc276640535815",
+    "semantic_hash": "504e3df9b5e6a32693dc276640535815"
+  },
+  "img/carta/taiyaki.webp": {
+    "mtime": 1791235802.422292,
+    "seen": 1791294563.0073583,
+    "ast_hash": "46e63ae43948101da1046b8e9e1f31a6",
+    "semantic_hash": "46e63ae43948101da1046b8e9e1f31a6"
+  },
+  "img/carta/takoyaki.webp": {
+    "mtime": 1791235802.2816339,
+    "seen": 1791294563.007359,
+    "ast_hash": "8e1f660edec2b2368ea223f7efce5dbd",
+    "semantic_hash": "8e1f660edec2b2368ea223f7efce5dbd"
+  },
+  "img/carta/yakimix.webp": {
+    "mtime": 1791235803.342109,
+    "seen": 1791294563.0073597,
+    "ast_hash": "809fceeb7b323095f2d8fc94f330e1d6",
+    "semantic_hash": "809fceeb7b323095f2d8fc94f330e1d6"
+  },
+  "img/marca/logo-sobre-oscuro.svg": {
+    "mtime": 1791231266.9994204,
+    "seen": 1791294563.0073605,
+    "ast_hash": "4d3a6e5f1b1e648edbc3df1ce7991a6c",
+    "semantic_hash": "4d3a6e5f1b1e648edbc3df1ce7991a6c"
+  },
+  "img/marca/logo.svg": {
+    "mtime": 1791231266.9994204,
+    "seen": 1791294563.0073612,
+    "ast_hash": "e3ce057ea11b388e817de4d4bc192e98",
+    "semantic_hash": "e3ce057ea11b388e817de4d4bc192e98"
+  },
+  "img/marca/mancha.svg": {
+    "mtime": 1791231266.9994204,
+    "seen": 1791294563.0073621,
+    "ast_hash": "54b7693d28a8231b55edebe4bdea1e92",
+    "semantic_hash": "54b7693d28a8231b55edebe4bdea1e92"
+  }
+}

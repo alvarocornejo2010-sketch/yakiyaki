@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Sistema visual de Yakiyaki</title>
+<link rel="icon" href="img/marca/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,700..900&family=Figtree:wght@400..800&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/componentes.css">
+<link rel="stylesheet" href="css/muestra.css">
+</head>
+<body>
+
+<!-- Símbolos reutilizables: silueta del logo (sellos), motivo de trazos e íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mancha" viewBox="9 28 226 239"><path fill-rule="evenodd" d="M75.0 31.0C77.5 30.8 79.4 30.9 82.0 31.8C84.6 32.7 88.4 34.6 90.8 36.2C93.1 37.8 93.8 38.6 96.1 41.5C98.4 44.4 102.1 53.5 104.5 53.7C106.9 53.9 108.3 45.1 110.2 42.7C112.2 40.3 114.2 39.8 116.1 39.0C118.0 38.2 119.0 37.7 121.5 37.6C124.0 37.6 128.2 38.1 131.0 38.8C133.8 39.5 132.8 38.5 138.2 41.8C143.7 45.1 159.1 55.8 163.8 58.3C168.4 60.9 164.4 59.0 166.1 57.0C167.8 55.0 171.5 48.1 174.0 46.2C176.5 44.4 179.5 45.2 181.2 45.8C183.0 46.5 184.1 48.8 184.7 50.2C185.4 51.7 186.3 51.8 184.9 54.5C183.6 57.2 177.9 64.4 176.6 66.8C175.3 69.1 176.2 67.9 176.9 68.5C177.6 69.1 178.8 71.5 180.8 70.2C182.7 68.9 186.9 62.8 188.8 60.9C190.6 59.0 190.9 59.1 192.0 58.8C193.1 58.5 194.1 58.3 195.5 58.9C196.9 59.6 199.6 61.4 200.5 62.8C201.4 64.1 201.2 65.7 201.0 67.0C200.9 68.3 201.0 68.5 199.6 70.5C198.1 72.5 193.3 77.2 192.3 79.2C191.3 81.3 193.1 82.1 193.6 82.8C194.1 83.4 194.2 83.9 195.5 83.2C196.8 82.4 199.5 79.4 201.2 78.2C203.0 77.0 204.4 76.5 205.8 75.9C207.1 75.4 207.8 75.0 209.5 74.8C211.2 74.6 214.0 74.4 216.0 74.8C218.0 75.2 219.8 75.9 221.6 77.0C223.5 78.1 225.6 79.2 227.3 81.5C229.0 83.8 231.2 88.0 231.9 90.5C232.7 93.0 232.5 94.5 232.0 96.8C231.5 99.0 231.1 101.1 229.0 104.1C226.9 107.0 219.6 109.3 219.2 114.2C218.9 119.2 225.1 128.0 226.9 133.5C228.7 139.0 229.5 141.0 230.0 147.0C230.6 153.0 230.8 162.8 230.1 169.8C229.4 176.7 228.1 182.2 225.9 188.5C223.6 194.8 220.2 201.8 216.9 207.5C213.6 213.2 209.1 218.8 205.9 222.8C202.7 226.7 200.5 228.5 197.5 231.2C194.5 233.8 193.4 235.3 187.8 238.7C182.1 242.2 171.5 248.2 163.8 251.8C156.0 255.3 148.2 258.0 141.0 260.1C133.8 262.1 127.2 263.5 120.2 264.2C113.3 264.9 106.7 265.0 99.2 264.2C91.8 263.3 82.3 261.0 75.5 259.0C68.7 257.0 63.8 255.1 58.3 252.0C52.8 248.9 46.5 243.9 42.2 240.2C38.0 236.6 35.8 233.7 33.1 230.0C30.4 226.3 28.7 223.9 25.9 217.8C23.2 211.6 18.8 200.1 16.7 193.2C14.7 186.4 14.5 182.8 13.6 176.5C12.7 170.2 11.2 165.0 11.6 155.8C11.9 146.5 13.6 131.6 15.6 121.0C17.7 110.4 20.8 100.7 23.9 92.2C26.9 83.8 29.6 77.9 33.8 70.2C38.1 62.6 45.0 52.0 49.5 46.3C54.0 40.6 58.0 38.2 61.0 36.0C64.0 33.7 64.9 33.7 67.2 32.9C69.6 32.0 72.5 31.2 75.0 31.0ZM209.7 90.0C211.2 89.3 213.3 89.6 214.5 90.0C215.7 90.5 216.7 91.5 217.0 92.8C217.2 94.0 216.6 95.9 215.8 97.2C215.1 98.6 213.3 100.2 212.2 100.6C211.2 101.0 210.6 100.7 209.5 99.7C208.4 98.7 205.8 96.1 205.8 94.5C205.8 92.9 208.3 90.7 209.7 90.0Z"/></symbol>
+  <symbol id="ajiro" viewBox="0 0 90 60">
+    <rect x="4" y="3" width="22" height="6" rx="3"/><rect x="4" y="12" width="22" height="6" rx="3"/><rect x="4" y="21" width="22" height="6" rx="3"/>
+    <rect x="33" y="4" width="6" height="22" rx="3"/><rect x="42" y="4" width="6" height="22" rx="3"/><rect x="51" y="4" width="6" height="22" rx="3"/>
+    <rect x="34" y="33" width="22" height="6" rx="3"/><rect x="34" y="42" width="22" height="6" rx="3"/><rect x="34" y="51" width="22" height="6" rx="3"/>
+    <rect x="63" y="34" width="6" height="22" rx="3"/><rect x="72" y="34" width="6" height="22" rx="3"/><rect x="81" y="34" width="6" height="22" rx="3"/>
+  </symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-externo" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10.5c0 2.5 2 4.5 4.5 4.5l1.3-1.3-1.8-.9-.8.8a3.5 3.5 0 0 1-1.8-1.8l.8-.8-.9-1.8Z"/></symbol>
+  <symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.5 6.5h.01"/></symbol>
+</svg>
+
+<header class="muestra-cabecera superficie-tinta">
+  <div class="contenedor">
+    <div class="muestra-cabecera__fila">
+      <img class="muestra-cabecera__logo" src="img/marca/logo-sobre-oscuro.svg" alt="Yaki Yaki" width="226" height="239">
+      <div>
+        <h1 class="titulo">Sistema visual de Yakiyaki</h1>
+        <p class="texto-2">Fase B, versión 1. 5 de octubre de 2026.</p>
+      </div>
+    </div>
+    <p class="muestra-cabecera__nota">Estas son las piezas con las que se arma la web. La paleta sale del PDF de marca. El logo y las fotos son provisionales: los recorté del material que me pasaste, y se cambian cuando lleguen los archivos originales y el permiso para usarlos.</p>
+  </div>
+</header>
+
+<nav class="muestra-indice superficie-tinta" aria-label="Secciones de la muestra">
+  <ul>
+    <li><a class="nav-enlace" href="#portada">Portada</a></li>
+    <li><a class="nav-enlace" href="#yakibox">YakiBox</a></li>
+    <li><a class="nav-enlace" href="#color">Color</a></li>
+    <li><a class="nav-enlace" href="#tipografia">Tipografía</a></li>
+    <li><a class="nav-enlace" href="#botones">Botones</a></li>
+    <li><a class="nav-enlace" href="#precios">Precios</a></li>
+    <li><a class="nav-enlace" href="#etiquetas">Etiquetas</a></li>
+    <li><a class="nav-enlace" href="#favoritos">Favoritos</a></li>
+    <li><a class="nav-enlace" href="#combos">Combos</a></li>
+    <li><a class="nav-enlace" href="#carta">Carta</a></li>
+    <li><a class="nav-enlace" href="#pedir">Pedir</a></li>
+    <li><a class="nav-enlace" href="#experiencia">Experiencia</a></li>
+    <li><a class="nav-enlace" href="#movimiento">Movimiento</a></li>
+    <li><a class="nav-enlace" href="#pendientes">Pendientes</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ============ PORTADA ============ -->
+  <section class="muestra-seccion" id="portada" aria-labelledby="t-portada">
+    <div class="contenedor muestra-encabezado">
+      <h2 class="titulo titulo--m" id="t-portada">Portada</h2>
+      <p>Foto oscura de un lado y texto del otro. El título entra por líneas, los botones llegan después con un rebote corto y el vapor sube despacio sobre el plato.</p>
+      <div><button class="boton boton--secundario boton--chico" type="button" id="repetir-portada">Repetir la entrada</button></div>
+    </div>
+
+    <div class="hero superficie-tinta" id="portada-demo">
+      <div class="hero__fondo" aria-hidden="true">
+        <div class="hero__plato">
+          <img src="img/carta/ramen.webp" alt="" width="610" height="610">
+          <div class="vapor"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="contenedor">
+        <div class="hero__contenido">
+          <p class="sello">Street food japonés en Lima</p>
+          <p class="titulo titulo--l hero__titulo"><span class="linea"><span>Antojos japoneses,</span></span><span class="linea"><span>hechos para volver.</span></span></p>
+          <p class="bajada">Ramen, takoyaki, gyozas, karaage y bebidas para recoger o pedir.</p>
+          <div class="hero__acciones">
+            <a class="boton boton--primario" href="#carta">Ver carta</a>
+            <button class="boton boton--secundario" type="button" data-abrir-pedido>Pedir ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="muestra-pie-demo"><span class="contenedor" style="display:block">Foto provisional: recorte del ramen de su publicación del Combo Agosto. La versión final usa la foto nocturna de ramen a pantalla completa que menciona el PDF; esa foto no llegó.</span></p>
+  </section>
+
+  <!-- ============ ARMA TU YAKIBOX ============ -->
+  <section class="muestra-seccion" id="yakibox" aria-labelledby="t-yakibox">
+    <div class="contenedor muestra-encabezado">
+      <h2 class="titulo titulo--m" id="t-yakibox">Arma tu YakiBox</h2>
+      <p>El bloque de más impacto, con el recurso de sus publicaciones: turquesa, una palabra gigante detrás de la comida y el precio en un sello con la forma del logo. Los pasos van numerados porque son una secuencia real: entrada, arroz y karaage.</p>
+    </div>
+
+    <div class="yakibox superficie-turquesa">
+      <p class="palabra-gigante" aria-hidden="true">Yakibox</p>
+      <div class="contenedor yakibox__rejilla">
+        <div class="yakibox__fotos">
+          <img src="img/carta/karaage-sweet-chili.webp" alt="" width="800" height="800" loading="lazy">
+          <img src="img/carta/takoyaki.webp" alt="" width="800" height="800" loading="lazy">
+          <img src="img/carta/gohan-yakimeshi.webp" alt="" width="800" height="800" loading="lazy">
+          <svg class="trazos" aria-hidden="true"><use href="#ajiro"/></svg>
+          <p class="sello-precio sello-precio--grande" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">15 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>15</span></span></p>
+        </div>
+        <div class="yakibox__contenido">
+          <p class="titulo titulo--m">Arma tu YakiBox.</p>
+          <p class="bajada">Una entrada, un arroz y un karaage, todo en una caja.</p>
+          <form class="pasos" aria-label="Arma tu YakiBox">
+            <fieldset class="paso">
+              <legend>Elige tu entrada</legend>
+              <div class="chips">
+                <label class="opcion"><input type="radio" name="entrada" value="Takoyaki" checked><span>Takoyaki</span></label>
+                <label class="opcion"><input type="radio" name="entrada" value="Ebi furai"><span>Ebi furai</span></label>
+                <label class="opcion"><input type="radio" name="entrada" value="Gyoza"><span>Gyoza</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="paso">
+              <legend>Elige tu arroz</legend>
+              <div class="chips">
+                <label class="opcion"><input type="radio" name="arroz" value="Nori rice"><span>Nori rice</span></label>
+                <label class="opcion"><input type="radio" name="arroz" value="Yakimeshi" checked><span>Yakimeshi</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="paso">
+              <legend>Elige tu karaage</legend>
+              <div class="chips">
+                <label class="opcion"><input type="radio" name="karaage" value="Original"><span>Original</span></label>
+                <label class="opcion"><input type="radio" name="karaage" value="Honey mustard"><span>Honey mustard</span></label>
+                <label class="opcion"><input type="radio" name="karaage" value="Acevichado"><span>Acevichado</span></label>
+                <label class="opcion"><input type="radio" name="karaage" value="Sweet chili" checked><span>Sweet chili</span></label>
+              </div>
+            </fieldset>
+          </form>
+          <button class="boton boton--primario" type="button" data-abrir-pedido>Pedir mi YakiBox</button>
+        </div>
+      </div>
+    </div>
+    <p class="muestra-pie-demo"><span class="contenedor" style="display:block">Datos de su carta: YakiBox a S/ 15 con las opciones de su pieza "elige tu entrada, arroz y karaage". El PDF pedía el botón "Pedir para compartir", pero la YakiBox es individual; lo cambié a "Pedir mi YakiBox".</span></p>
+  </section>
+
+  <!-- ============ COLOR ============ -->
+  <section class="muestra-seccion" id="color" aria-labelledby="t-color">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-color">Color</h2>
+        <p>La base es negro tinta, crema y turquesa. Coral y naranja chili quedan para precios y promociones; kraft y yema, solo para detalles chicos. Nunca van todos juntos.</p>
+      </div>
+
+      <ul class="muestras-color">
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--tinta)"></div><div class="muestra-color__datos"><b>Negro tinta</b><code>#151315</code><span>Fondos oscuros y texto</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--crema)"></div><div class="muestra-color__datos"><b>Crema papel</b><code>#F7F0E4</code><span>Fondo claro principal</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--turquesa)"></div><div class="muestra-color__datos"><b>Turquesa Yaki</b><code>#82D6D0</code><span>Color de marca. En sus posts se ve #84CBC7</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--coral)"></div><div class="muestra-color__datos"><b>Coral melón</b><code>#F1847A</code><span>Sellos de precio y promos</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--chili)"></div><div class="muestra-color__datos"><b>Naranja chili</b><code>#F16437</code><span>Precios destacados e íconos de comida</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--kraft)"></div><div class="muestra-color__datos"><b>Kraft tostado</b><code>#B77B4C</code><span>Detalles de empaque</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--yema)"></div><div class="muestra-color__datos"><b>Amarillo yema</b><code>#F5C84C</code><span>Etiquetas chicas, nunca fondos</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--papel)"></div><div class="muestra-color__datos"><b>Papel</b><code>#FFFBF4</code><span>Propuesta: tarjetas sobre crema</span></div></li>
+        <li class="muestra-color"><div class="muestra-color__chip" style="background:var(--tinta-suave)"></div><div class="muestra-color__datos"><b>Tinta suave</b><code>#5E5650</code><span>Propuesta: texto secundario</span></div></li>
+      </ul>
+
+      <h3 class="muestra-subtitulo">Contraste de cada pareja</h3>
+      <p class="texto-2" style="margin-bottom:var(--esp-4)">Se calcula en vivo con los valores de tokens.css. AA exige 4.5:1 para texto normal y 3:1 para texto grande.</p>
+      <div class="envoltura-tabla">
+        <table class="tabla-contraste">
+          <thead><tr><th scope="col">Muestra</th><th scope="col">Pareja</th><th scope="col">Uso</th><th scope="col">Contraste</th><th scope="col">Resultado</th></tr></thead>
+          <tbody id="cuerpo-contraste"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIPOGRAFÍA ============ -->
+  <section class="muestra-seccion" id="tipografia" aria-labelledby="t-tipografia">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-tipografia">Tipografía</h2>
+        <p>Archivo en su versión condensada para títulos y precios: compacta y pesada, como una etiqueta de mercado. Figtree para el texto: abierta y fácil de leer en el celular. Las dos son de Google Fonts.</p>
+      </div>
+      <div class="lienzo">
+        <div class="especimen"><span class="especimen__dato">Título de portada. Archivo condensada 850, de 52 a 96 px</span><p class="titulo titulo--l">Antojos japoneses, hechos para volver.</p></div>
+        <div class="especimen"><span class="especimen__dato">Título de sección. De 36 a 60 px</span><p class="titulo titulo--m">Arma tu YakiBox.</p></div>
+        <div class="especimen"><span class="especimen__dato">Título de tarjeta y plato. De 24 a 30 px</span><p class="titulo titulo--s">Takoyaki</p></div>
+        <div class="especimen"><span class="especimen__dato">Bajada. Figtree 20 px</span><p class="bajada">Ramen, takoyaki, gyozas, karaage y bebidas para recoger o pedir.</p></div>
+        <div class="especimen"><span class="especimen__dato">Texto. Figtree 17 px, interlineado 1.55, líneas de 34 rem como máximo</span><p style="max-width:var(--medida-texto)">No es solo comer. Es picar, probar, compartir y volver por algo nuevo. Takoyaki, gyozas, karaage y taiyaki en Calle 31, San Isidro, para recoger o pedir.</p></div>
+        <div class="especimen"><span class="especimen__dato">Precios. Archivo condensada 800, con cifras del mismo ancho para que se alineen</span>
+          <div class="precios-alineados">
+            <span class="precio"><span class="precio__moneda">S/</span>12.90</span>
+            <span class="precio"><span class="precio__moneda">S/</span>19.90</span>
+            <span class="precio"><span class="precio__moneda">S/</span>5.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOTONES ============ -->
+  <section class="muestra-seccion" id="botones" aria-labelledby="t-botones">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-botones">Botones y enlaces</h2>
+        <p>Todos miden al menos 44 px de alto. El cambio de color al pasar el cursor dura 120 ms; al presionar, el botón se hunde un poco. El foco del teclado se ve siempre.</p>
+      </div>
+
+      <div class="lienzo superficie-crema">
+        <h3 class="muestra-subtitulo">Principal</h3>
+        <div class="fila-demo">
+          <div class="estado-demo"><a class="boton boton--primario" href="#botones">Ver carta</a><small>Reposo</small></div>
+          <div class="estado-demo"><a class="boton boton--primario es-hover" href="#botones">Ver carta</a><small>Cursor encima</small></div>
+          <div class="estado-demo"><a class="boton boton--primario es-foco" href="#botones">Ver carta</a><small>Foco de teclado</small></div>
+          <div class="estado-demo"><a class="boton boton--primario es-presionado" href="#botones">Ver carta</a><small>Presionado</small></div>
+          <div class="estado-demo"><button class="boton boton--primario" type="button" disabled>Ver carta</button><small>Desactivado</small></div>
+        </div>
+        <h3 class="muestra-subtitulo">Secundario</h3>
+        <div class="fila-demo">
+          <div class="estado-demo"><button class="boton boton--secundario" type="button" data-abrir-pedido>Pedir ahora</button><small>Reposo</small></div>
+          <div class="estado-demo"><button class="boton boton--secundario es-hover" type="button">Pedir ahora</button><small>Cursor encima</small></div>
+          <div class="estado-demo"><button class="boton boton--secundario es-foco" type="button">Pedir ahora</button><small>Foco de teclado</small></div>
+        </div>
+        <h3 class="muestra-subtitulo">Promoción</h3>
+        <div class="fila-demo">
+          <div class="estado-demo"><button class="boton boton--promo" type="button">Pedir el Combo Dos</button><small>Reposo</small></div>
+          <div class="estado-demo"><button class="boton boton--promo es-hover" type="button">Pedir el Combo Dos</button><small>Cursor encima</small></div>
+        </div>
+        <h3 class="muestra-subtitulo">Enlaces</h3>
+        <div class="fila-demo">
+          <div class="estado-demo"><a class="enlace-flecha" href="#botones">Cómo llegar <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a><small>Reposo</small></div>
+          <div class="estado-demo"><a class="enlace-flecha es-hover" href="#botones">Cómo llegar <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a><small>Cursor encima: la flecha avanza</small></div>
+          <div class="estado-demo"><a class="nav-enlace" href="#botones">Carta</a><small>Menú</small></div>
+          <div class="estado-demo"><a class="nav-enlace es-hover" href="#botones">Carta</a><small>Menú, cursor encima</small></div>
+        </div>
+      </div>
+
+      <div class="lienzo superficie-tinta">
+        <h3 class="muestra-subtitulo">Sobre fondo oscuro</h3>
+        <div class="fila-demo">
+          <div class="estado-demo"><a class="boton boton--primario" href="#botones">Ver carta</a><small>Principal</small></div>
+          <div class="estado-demo"><button class="boton boton--secundario" type="button">Pedir ahora</button><small>Secundario</small></div>
+          <div class="estado-demo"><button class="boton boton--secundario es-hover" type="button">Pedir ahora</button><small>Secundario, cursor encima</small></div>
+          <div class="estado-demo"><a class="boton boton--primario es-foco" href="#botones">Ver carta</a><small>Foco en turquesa</small></div>
+          <div class="estado-demo"><a class="boton boton--icono" href="tel:+51912848007"><svg class="icono" aria-hidden="true"><use href="#i-telefono"/></svg>Llamar</a><small>Contacto</small></div>
+          <div class="estado-demo"><a class="boton boton--icono" href="#pedir"><svg class="icono" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a><small>Contacto</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRECIOS ============ -->
+  <section class="muestra-seccion" id="precios" aria-labelledby="t-precios">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-precios">Precios y sellos</h2>
+        <p>El sello usa la silueta del logo, como el "s/20" coral de su publicación del Combo Agosto. Entra con un pequeño pop una sola vez, cuando aparece en pantalla.</p>
+      </div>
+      <div class="lienzo">
+        <div class="fila-demo fila-demo--abajo">
+          <div class="estado-demo"><p class="sello-precio" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">12.90 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>12.90</span></span></p><small>Coral, el de siempre</small></div>
+          <div class="estado-demo"><p class="sello-precio sello-precio--tinta" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">20 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>20</span></span></p><small>Tinta, sobre fotos claras</small></div>
+          <div class="estado-demo"><p class="sello-precio sello-precio--chili" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">35 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>35</span></span></p><small>Chili, para destacar</small></div>
+          <div class="estado-demo"><p class="sello-precio sello-precio--grande" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">15 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>15</span></span></p><small>Grande, para promociones</small></div>
+        </div>
+        <div style="margin-top:var(--esp-5)"><button class="boton boton--secundario boton--chico" type="button" id="repetir-pop">Repetir el pop</button></div>
+      </div>
+      <div class="lienzo dos-columnas">
+        <div class="estado-demo">
+          <small>Precio en línea</small>
+          <span class="precio"><span class="precio__moneda">S/</span>12.90</span>
+          <small style="margin-top:var(--esp-4)">Sin precio confirmado</small>
+          <span class="precio--consultar">Consultar</span>
+        </div>
+        <div class="estado-demo" style="justify-items:stretch">
+          <small>Tabla por tamaño</small>
+          <dl class="precios">
+            <div><dt>Mediano</dt><dd><span class="precio"><span class="precio__moneda">S/</span>12.90</span></dd></div>
+            <div><dt>Grande</dt><dd><span class="precio"><span class="precio__moneda">S/</span>19.90</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ETIQUETAS ============ -->
+  <section class="muestra-seccion" id="etiquetas" aria-labelledby="t-etiquetas">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-etiquetas">Etiquetas, chips y sellos</h2>
+        <p>Los chips muestran sabores y rellenos. Las opciones que se eligen son botones de radio de verdad, con aspecto de chip, para que funcionen con teclado y lector de pantalla.</p>
+      </div>
+      <div class="lienzo">
+        <div class="dos-columnas">
+          <div class="estado-demo"><small>Etiqueta</small><span class="etiqueta">Para compartir</span></div>
+          <div class="estado-demo"><small>Estado de horario</small><span class="estado">Abierto ahora, cierra a las 22:00</span><span class="estado estado--cerrado">Cerrado ahora, abre a las 12:00</span></div>
+          <div class="estado-demo"><small>Sabores de karaage</small><ul class="chips"><li class="chip">Original</li><li class="chip">Honey mustard</li><li class="chip">Acevichado</li><li class="chip">Sweet chili</li></ul></div>
+          <div class="estado-demo"><small>Rellenos de taiyaki</small><ul class="chips"><li class="chip">Pastelera</li><li class="chip">Choco</li><li class="chip">Manjar</li><li class="chip">Matcha</li><li class="chip">Avellanas</li></ul></div>
+        </div>
+      </div>
+      <div class="lienzo">
+        <fieldset class="paso">
+          <legend>Elige tu arroz</legend>
+          <div class="chips">
+            <label class="opcion"><input type="radio" name="arroz-demo" value="Nori rice" checked><span>Nori rice</span></label>
+            <label class="opcion"><input type="radio" name="arroz-demo" value="Yakimeshi"><span>Yakimeshi</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="lienzo dos-columnas" style="align-items:center">
+        <div class="fila-demo"><p class="sello">Street food japonés en Lima</p><svg class="trazos" aria-hidden="true"><use href="#ajiro"/></svg></div>
+        <div class="fila-demo superficie-tinta" style="padding:var(--esp-5);border-radius:var(--radio-tarjeta)"><p class="sello">Street food japonés en Lima</p><svg class="trazos" aria-hidden="true"><use href="#ajiro"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAVORITOS ============ -->
+  <section class="muestra-seccion" id="favoritos" aria-labelledby="t-favoritos">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-favoritos">Favoritos: tarjeta ticket</h2>
+        <p>Cada favorito es un ticket de comida, como los que se compran en las máquinas de los locales de ramen: papel, perforación y muescas. Al pasar el cursor sube 6 px y la foto crece 3%. Son cuatro, como pide el PDF: ramen, takoyaki, gyozas y onigiri, que en su carta se llama gohan. El YakiMix pasó a la sección de combos.</p>
+      </div>
+      <div class="rejilla-tickets">
+        <article class="ticket">
+          <div class="ticket__foto"><img src="img/carta/ramen.webp" alt="Ramen con gyozas, huevo, nori y cebolla china" width="610" height="610" loading="lazy"></div>
+          <p class="sello-precio" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">20 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>20</span></span></p>
+          <div class="ticket__cuerpo">
+            <h3 class="titulo ticket__nombre">Combo Ramen</h3>
+            <p class="ticket__desc">Ramen normal o picante, con takoyakis.</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Combo Ramen</span></button>
+          </div>
+        </article>
+        <article class="ticket">
+          <div class="ticket__foto"><img src="img/carta/takoyaki.webp" alt="Takoyakis con salsa, mayonesa y hojuelas de bonito" width="800" height="800" loading="lazy"></div>
+          <p class="sello-precio" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">12.90 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>12.90</span></span></p>
+          <div class="ticket__cuerpo">
+            <h3 class="titulo ticket__nombre">Takoyaki</h3>
+            <p class="ticket__desc">8 piezas de pulpo y verduras. Original o acevichado.</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Takoyaki</span></button>
+          </div>
+        </article>
+        <article class="ticket">
+          <div class="ticket__foto"><img src="img/carta/gyozas.webp" alt="Gyozas con salsa y cebolla china" width="360" height="340" loading="lazy"></div>
+          <p class="sello-precio" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">12.90 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>12.90</span></span></p>
+          <div class="ticket__cuerpo">
+            <h3 class="titulo ticket__nombre">Gyozas</h3>
+            <p class="ticket__desc">Rellenas de pollo, verduras y cebolla china.</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Gyozas</span></button>
+          </div>
+        </article>
+        <article class="ticket">
+          <div class="ticket__foto"><img src="img/carta/gohan-nori.webp" alt="Bola de arroz envuelta en alga nori" width="800" height="800" loading="lazy"></div>
+          <p class="sello-precio" data-pop><svg class="sello-precio__forma" aria-hidden="true"><use href="#mancha"/></svg><span class="precio"><span class="solo-lectores">5 soles</span><span aria-hidden="true"><span class="precio__moneda">S/</span>5</span></span></p>
+          <div class="ticket__cuerpo">
+            <h3 class="titulo ticket__nombre">Gohan</h3>
+            <p class="ticket__desc">Bola de arroz: nori rice o yakimeshi.</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Gohan</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMBOS ============ -->
+  <section class="muestra-seccion superficie-tinta" id="combos" aria-labelledby="t-combos">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-combos">Combos: sus pósters, con la información en texto</h2>
+        <p>Los pósters de su Instagram ya tienen la identidad de la marca, así que van como imagen. El nombre, lo que trae y el precio van además en texto: se leen bien en cualquier pantalla, los lee un lector de pantalla y se cambian sin rehacer la imagen.</p>
+      </div>
+      <ul class="combos" aria-label="Combos" tabindex="0">
+        <li class="combo">
+          <img class="combo__poster" src="img/carta/poster-combo-uno.webp" alt="Póster del Combo Uno: botella de Limorada y caja con ebi furai, takoyakis y gyozas" width="720" height="900" loading="lazy">
+          <h3 class="titulo combo__nombre">Combo Uno</h3>
+          <p class="combo__desc">2 takoyakis, 2 ebi furai y 2 gyozas, con una Limorada de 500 ml.</p>
+          <div class="combo__pie">
+            <p class="precio"><span class="precio__moneda">S/</span>15</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Combo Uno</span></button>
+          </div>
+        </li>
+        <li class="combo">
+          <img class="combo__poster" src="img/carta/poster-combo-dos.webp" alt="Póster del Combo Dos: vaso de karaage y caja con dos bolas de arroz" width="720" height="960" loading="lazy">
+          <h3 class="titulo combo__nombre">Combo Dos</h3>
+          <p class="combo__desc">Karaage grande con hasta 2 sabores, más un gohan de yakimeshi y uno de nori rice.</p>
+          <div class="combo__pie">
+            <p class="precio"><span class="precio__moneda">S/</span>25</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> Combo Dos</span></button>
+          </div>
+        </li>
+        <li class="combo">
+          <img class="combo__poster" src="img/carta/poster-yakimix.webp" alt="Póster del YakiMix: caja con takoyakis, gyozas y ebi furai" width="720" height="900" loading="lazy">
+          <h3 class="titulo combo__nombre">YakiMix</h3>
+          <p class="combo__desc">Para compartir: 8 takoyakis, 7 gyozas y 6 ebi furai.</p>
+          <div class="combo__pie">
+            <p class="precio"><span class="precio__moneda">S/</span>35</p>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Pedir<span class="solo-lectores"> YakiMix</span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <p class="muestra-pie-demo"><span class="contenedor" style="display:block">No usé el póster del Combo Agosto: dice "Agosto" y en la carta ahora se llama Combo Ramen. Hace falta una versión sin el mes. Si un precio cambia, también hay que cambiar el póster, porque el precio está dentro de la imagen.</span></p>
+
+  <!-- ============ CARTA ============ -->
+  <section class="muestra-seccion" id="carta" aria-labelledby="t-carta">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-carta">Carta por categorías</h2>
+        <p>Pestañas que se mueven con el dedo en el celular y con las flechas del teclado. Cada categoría tiene enlace propio, por ejemplo <a href="#menu-karaage">#menu-karaage</a>. Las categorías usan las palabras de su propia carta: entrada, arroz y karaage.</p>
+      </div>
+      <div class="carta-demo">
+        <p class="nota-precios">Precios en el local y por WhatsApp. En Rappi y PedidosYa pueden variar.</p>
+        <div class="pestanas" role="tablist" aria-label="Categorías de la carta">
+          <button class="pestana" type="button" role="tab" id="tab-combos" aria-controls="menu-combos" aria-selected="true">Combos</button>
+          <button class="pestana" type="button" role="tab" id="tab-entradas" aria-controls="menu-entradas" aria-selected="false" tabindex="-1">Entradas</button>
+          <button class="pestana" type="button" role="tab" id="tab-karaage" aria-controls="menu-karaage" aria-selected="false" tabindex="-1">Karaage</button>
+          <button class="pestana" type="button" role="tab" id="tab-arroz" aria-controls="menu-arroz" aria-selected="false" tabindex="-1">Arroz</button>
+          <button class="pestana" type="button" role="tab" id="tab-ramen" aria-controls="menu-ramen" aria-selected="false" tabindex="-1">Ramen</button>
+          <button class="pestana" type="button" role="tab" id="tab-dulces" aria-controls="menu-dulces" aria-selected="false" tabindex="-1">Dulces</button>
+          <button class="pestana" type="button" role="tab" id="tab-bebidas" aria-controls="menu-bebidas" aria-selected="false" tabindex="-1">Bebidas</button>
+        </div>
+
+        <div class="panel-carta" role="tabpanel" id="menu-combos" aria-labelledby="tab-combos" tabindex="0">
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Combo Uno</h3><p class="precio"><span class="precio__moneda">S/</span>15.00</p><p class="plato__desc">2 takoyakis, 2 ebi furai y 2 gyozas, con una Limorada de 500 ml.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">Combo Dos</h3><p class="precio"><span class="precio__moneda">S/</span>25.00</p><p class="plato__desc">Karaage grande con hasta 2 sabores, más un gohan de yakimeshi y uno de nori rice.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">Combo Ramen</h3><p class="precio"><span class="precio__moneda">S/</span>20.00</p><p class="plato__desc">Ramen normal o picante, con una porción pequeña de takoyaki.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">YakiMix</h3><p class="precio"><span class="precio__moneda">S/</span>35.00</p><p class="plato__desc">Box de snacks nikkei para compartir: 8 takoyakis, 7 gyozas y 6 ebi furai.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">YakiBox</h3><p class="precio"><span class="precio__moneda">S/</span>15.00</p><p class="plato__desc">Arma tu caja: una entrada, un arroz y un karaage.</p></li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-entradas" aria-labelledby="tab-entradas" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Takoyaki</h3><p class="precio"><span class="precio__moneda">S/</span>12.90</p><p class="plato__desc">8 piezas. Masitas rellenas de pulpo y verduras.</p><ul class="chips" aria-label="Sabores"><li class="chip">Original</li><li class="chip">Acevichado</li></ul></li>
+            <li class="plato"><h3 class="titulo plato__nombre">Gyozas</h3><p class="precio"><span class="precio__moneda">S/</span>12.90</p><p class="plato__desc">7 piezas, rellenas de pollo, verduras y cebolla china.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">Ebi furai</h3><p class="precio"><span class="precio__moneda">S/</span>12.90</p><p class="plato__desc">6 langostinos empanizados al panko.</p></li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-karaage" aria-labelledby="tab-karaage" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Karaage</h3><p class="plato__desc">Pollo frito al estilo japonés con la salsa que elijas.</p>
+              <dl class="precios">
+                <div><dt>Mediano</dt><dd><span class="precio"><span class="precio__moneda">S/</span>12.90</span></dd></div>
+                <div><dt>Grande</dt><dd><span class="precio"><span class="precio__moneda">S/</span>19.90</span></dd></div>
+              </dl>
+              <ul class="chips" aria-label="Sabores"><li class="chip">Original</li><li class="chip">Honey mustard</li><li class="chip">Acevichado</li><li class="chip">Sweet chili</li></ul>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-arroz" aria-labelledby="tab-arroz" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Gohan</h3><p class="precio"><span class="precio__moneda">S/</span>5.00</p><p class="plato__desc">Bola de arroz: nori rice, envuelta en alga nori, o yakimeshi, arroz frito.</p><ul class="chips" aria-label="Opciones"><li class="chip">Nori rice</li><li class="chip">Yakimeshi</li></ul></li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-ramen" aria-labelledby="tab-ramen" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Ramen</h3><p class="precio--consultar">Consultar</p><p class="plato__desc">Normal o picante.</p></li>
+            <li class="plato"><h3 class="titulo plato__nombre">Combo Ramen</h3><p class="precio"><span class="precio__moneda">S/</span>20.00</p><p class="plato__desc">Ramen normal o picante, con una porción pequeña de takoyaki.</p></li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-dulces" aria-labelledby="tab-dulces" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Taiyaki</h3><p class="precio"><span class="precio__moneda">S/</span>6.00</p><p class="plato__desc">Waffle en forma de pez, una pieza, con el relleno que elijas.</p><ul class="chips" aria-label="Rellenos"><li class="chip">Pastelera</li><li class="chip">Choco</li><li class="chip">Manjar</li><li class="chip">Matcha</li><li class="chip">Avellanas</li></ul></li>
+          </ul>
+        </div>
+        <div class="panel-carta" role="tabpanel" id="menu-bebidas" aria-labelledby="tab-bebidas" tabindex="0" hidden>
+          <ul class="platos">
+            <li class="plato"><h3 class="titulo plato__nombre">Limorada</h3><p class="precio--consultar">Consultar</p><p class="plato__desc">Limonada con té de butterfly pea. Botella de 500 ml.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PEDIR ============ -->
+  <section class="muestra-seccion" id="pedir" aria-labelledby="t-pedir">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-pedir">Pedir: hoja de canales y barra inferior</h2>
+        <p>"Pedir ahora" abre una hoja con los canales. En el celular, la barra de abajo junta Pedir ahora, WhatsApp y Llamar, como aprobaste.</p>
+      </div>
+      <div class="pedir-demo">
+        <div class="telefono">
+          <div class="telefono__pantalla">
+            <p class="titulo titulo--s" style="margin-bottom:var(--esp-4)">Favoritos</p>
+            <div class="bloque"></div><div class="bloque"></div><div class="bloque"></div><div class="bloque"></div><div class="bloque"></div>
+          </div>
+          <div class="barra-pedido superficie-tinta es-visible" id="barra-demo">
+            <button class="boton boton--primario" type="button" data-abrir-pedido>Pedir ahora</button>
+            <a class="boton boton--icono" href="#pedir"><svg class="icono" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+            <a class="boton boton--icono" href="tel:+51912848007"><svg class="icono" aria-hidden="true"><use href="#i-telefono"/></svg>Llamar</a>
+          </div>
+        </div>
+        <div class="pedir-demo__texto">
+          <p>La barra entra desde abajo cuando la persona deja la portada y la página guarda espacio al final para que no tape el pie. En computadora no aparece: ahí "Pedir ahora" va en la cabecera.</p>
+          <div class="fila-demo">
+            <button class="boton boton--secundario boton--chico" type="button" id="alternar-barra" aria-pressed="true">Mostrar u ocultar la barra</button>
+            <button class="boton boton--primario boton--chico" type="button" data-abrir-pedido>Abrir la hoja de pedido</button>
+          </div>
+          <p class="texto-2">WhatsApp aparece solo si el negocio confirma que el 912 848 007 recibe pedidos por ahí. PedidosYa aparece cuando tengamos su enlace; mientras tanto el botón no se muestra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCIA ============ -->
+  <section class="muestra-seccion" id="experiencia" aria-labelledby="t-experiencia">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-experiencia">Experiencia Yaki Yaki: carrusel</h2>
+        <p>Fotos grandes que se deslizan con el dedo, sin avance automático. Esta sección es la que abre el enlace "Nosotros" del menú; no cuenta una historia que no tenemos.</p>
+      </div>
+      <p class="titulo titulo--m" style="max-width:20ch;margin-bottom:var(--esp-6)">No es solo comer. Es picar, probar, compartir y volver por algo nuevo.</p>
+      <ul class="carrusel" aria-label="Fotos de Yaki Yaki" tabindex="0">
+        <li><figure><img src="img/carta/taiyaki.webp" alt="Dos taiyakis, waffles en forma de pez" width="800" height="800" loading="lazy"><figcaption>Taiyaki</figcaption></figure></li>
+        <li><figure><img src="img/carta/ramen.webp" alt="Ramen con gyozas, huevo y nori" width="610" height="610" loading="lazy"><figcaption>Ramen</figcaption></figure></li>
+        <li><figure><img src="img/carta/yakimix.webp" alt="Caja YakiMix para compartir" width="1080" height="390" loading="lazy"><figcaption>Para compartir</figcaption></figure></li>
+        <li><figure><img src="img/carta/karaage-sweet-chili.webp" alt="Karaage con salsa sweet chili y ajonjolí" width="800" height="800" loading="lazy"><figcaption>Karaage sweet chili</figcaption></figure></li>
+        <li><figure><img src="img/carta/gohan-nori.webp" alt="Bola de arroz envuelta en alga nori" width="800" height="800" loading="lazy"><figcaption>Nori rice</figcaption></figure></li>
+        <li><figure><img src="img/carta/gohan-yakimeshi.webp" alt="Yakimeshi, arroz frito con huevo y verduras" width="800" height="800" loading="lazy"><figcaption>Yakimeshi</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MOVIMIENTO ============ -->
+  <section class="muestra-seccion" id="movimiento" aria-labelledby="t-movimiento">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-movimiento">Movimiento, espacios y radios</h2>
+        <p>Solo se anima la opacidad y la posición, que no hacen lenta la página. Si el celular tiene activado "reducir movimiento", todo queda quieto.</p>
+      </div>
+      <div class="dos-columnas">
+        <ul class="lista-movimiento">
+          <li><b>Vapor de la portada</b><span>Tres volutas suaves, 7 s cada una, sin video.</span></li>
+          <li><b>Entrada de la portada</b><span>Título por líneas en 480 ms; botones después, con un rebote corto.</span></li>
+          <li><b>Tarjetas</b><span>Suben 6 px y la foto crece 3% al pasar el cursor.</span></li>
+          <li><b>Precios</b><span>Pop una sola vez al aparecer.</span></li>
+          <li><b>Carta</b><span>Al cambiar de categoría, los platos aparecen en 220 ms.</span></li>
+          <li><b>Barra inferior</b><span>Entra desde abajo al dejar la portada.</span></li>
+          <li><b>Botones y enlaces</b><span>Color en 120 ms, flecha que avanza 4 px, subrayado que crece en el menú.</span></li>
+        </ul>
+        <div>
+          <h3 class="muestra-subtitulo">Espacios (escala de 4 px)</h3>
+          <ul class="escala-espacios">
+            <li><code>4 px</code><span style="width:4px"></span></li>
+            <li><code>8 px</code><span style="width:8px"></span></li>
+            <li><code>12 px</code><span style="width:12px"></span></li>
+            <li><code>16 px</code><span style="width:16px"></span></li>
+            <li><code>24 px</code><span style="width:24px"></span></li>
+            <li><code>32 px</code><span style="width:32px"></span></li>
+            <li><code>48 px</code><span style="width:48px"></span></li>
+            <li><code>64 px</code><span style="width:64px"></span></li>
+            <li><code>96 px</code><span style="width:96px"></span></li>
+          </ul>
+          <h3 class="muestra-subtitulo">Radios</h3>
+          <div class="radios-demo">
+            <div style="border-radius:var(--radio-chip)">Botón</div>
+            <div style="border-radius:var(--radio-foto)">Foto 10</div>
+            <div style="border-radius:var(--radio-tarjeta)">Tarjeta 14</div>
+            <div style="border-radius:var(--radio-hoja)">Hoja 24</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PENDIENTES ============ -->
+  <section class="muestra-seccion" id="pendientes" aria-labelledby="t-pendientes">
+    <div class="contenedor">
+      <div class="muestra-encabezado">
+        <h2 class="titulo titulo--m" id="t-pendientes">Lo que falta para cerrar el diseño</h2>
+      </div>
+      <ul class="pendientes">
+        <li><b>Logo oficial en vector</b> (SVG, AI o PDF). El de esta muestra lo tracé desde una publicación.</li>
+        <li><b>Fotos originales en buena resolución, con permiso.</b> Las de aquí son recortes de su carta y de sus posts.</li>
+        <li><b>Foto nocturna de ramen para la portada</b> y la de la caja de delivery. El PDF dice que venían adjuntas, pero no llegaron.</li>
+        <li><b>WhatsApp:</b> ¿el 912 848 007 recibe pedidos por ahí?</li>
+        <li><b>Precios:</b> la carta del PDF no tiene fecha. ¿Sigue vigente?</li>
+        <li><b>Precios que faltan:</b> ramen solo, bebidas especiales (matcha, ichigo latte, bubble) y snacks importados.</li>
+        <li><b>Enlace de PedidosYa</b> y horario del domingo.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<dialog class="hoja" id="hoja-pedido" aria-labelledby="hoja-titulo">
+  <div class="hoja__interior">
+    <div class="hoja__cabeza">
+      <h2 class="titulo titulo--s" id="hoja-titulo">Pedir ahora</h2>
+      <button class="boton-cerrar" type="button" data-cerrar-pedido><svg class="icono" aria-hidden="true"><use href="#i-cerrar"/></svg><span class="solo-lectores">Cerrar</span></button>
+    </div>
+    <ul class="canales">
+      <li><a class="canal" href="https://www.rappi.com.pe/restaurantes/73247-yakiyaki" target="_blank" rel="noopener"><span class="canal__icono"><svg class="icono" aria-hidden="true"><use href="#i-moto"/></svg></span><span><span class="canal__nombre">Rappi</span><span class="canal__detalle">Delivery con los precios de Rappi</span></span><svg class="icono" aria-hidden="true"><use href="#i-externo"/></svg></a></li>
+      <li><a class="canal" href="#pedir"><span class="canal__icono"><svg class="icono" aria-hidden="true"><use href="#i-moto"/></svg></span><span><span class="canal__nombre">PedidosYa</span><span class="canal__detalle">Muestra: en la web se oculta hasta tener el enlace</span></span><svg class="icono" aria-hidden="true"><use href="#i-externo"/></svg></a></li>
+      <li><a class="canal" href="#pedir"><span class="canal__icono"><svg class="icono" aria-hidden="true"><use href="#i-whatsapp"/></svg></span><span><span class="canal__nombre">WhatsApp</span><span class="canal__detalle">912 848 007, por confirmar</span></span><svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a></li>
+      <li><a class="canal" href="tel:+51912848007"><span class="canal__icono"><svg class="icono" aria-hidden="true"><use href="#i-telefono"/></svg></span><span><span class="canal__nombre">Llamar</span><span class="canal__detalle">912 848 007</span></span><svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg></a></li>
+    </ul>
+    <p class="hoja__pie">Para recoger: Calle 31 n.º 110, San Isidro. De lunes a sábado, de 12:00 a 22:00.</p>
+  </div>
+</dialog>
+
+<script src="js/componentes.js"></script>
+<script src="js/muestra.js"></script>
+</body>
+</html>

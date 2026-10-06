@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "yakiyaki",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "C:/Users/Alvaro/Desktop/yakiyaki/herramientas/servidor.py",
+        "8160"
+      ],
+      "port": 8160
+    },
+    {
+      "name": "yakiyaki-publicado",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "C:/Users/Alvaro/Desktop/yakiyaki/herramientas/servidor.py",
+        "8161",
+        "publicar"
+      ],
+      "port": 8161
+    }
+  ]
+}

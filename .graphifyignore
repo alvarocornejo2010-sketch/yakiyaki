@@ -1,0 +1,7 @@
+# graphify: no indexar copias generadas ni registros de pruebas
+publicar/
+.playwright-mcp/
+graphify-out/
+# Versiones chicas de las fotos: son la misma foto a 400 px
+*-400.webp
+desktop.ini

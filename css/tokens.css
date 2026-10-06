@@ -1,0 +1,141 @@
+/* =========================================================================
+   Yakiyaki: tokens de diseño (Fase B, versión 1, 2026-10-05)
+
+   Para cambiar un color, una tipografía o un espaciado en todo el sitio,
+   cámbialo solo en este archivo.
+
+   Origen de cada valor:
+   - Paleta base: PDF "YAKI YAKI" entregado por el cliente.
+   - Derivados, tipografías, escalas y movimiento: [PROPUESTA] de diseño.
+   ========================================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---- 1. Paleta base (PDF de marca) ---------------------------------- */
+  --tinta: #151315;      /* fondos oscuros, textos fuertes */
+  --turquesa: #82D6D0;   /* color distintivo, fondos editoriales */
+  --coral: #F1847A;      /* promociones y calidez */
+  --crema: #F7F0E4;      /* fondo claro principal */
+  --kraft: #B77B4C;      /* guiño a empaques; solo detalles */
+  --chili: #F16437;      /* sellos de precio, íconos de comida */
+  --yema: #F5C84C;       /* acentos mínimos; nunca como fondo grande */
+
+  /* ---- 2. Derivados [PROPUESTA] --------------------------------------- */
+  --papel: #FFFBF4;            /* tarjetas sobre crema */
+  --crema-hundida: #EEE4D3;    /* chips y zonas hundidas */
+  --crema-borde: #DCCFBA;      /* bordes suaves sobre crema */
+  --tinta-suave: #5E5650;      /* texto secundario sobre crema (6.3:1) */
+  --tinta-elevada: #242023;    /* barras y hojas sobre tinta */
+  --crema-apagada: #CFC6B8;    /* texto secundario sobre tinta (10.9:1) */
+  --turquesa-hover: #6FCDC6;
+  --turquesa-presion: #5CC2BA;
+  --coral-hover: #EE6F63;
+
+  /* ---- 3. Roles por superficie (se redefinen en .superficie-*) -------- */
+  --superficie: var(--crema);
+  --texto: var(--tinta);
+  --texto-2: var(--tinta-suave);
+  --borde: var(--crema-borde);
+  --anillo: var(--tinta);          /* anillo de foco visible */
+
+  /* ---- 4. Tipografía [PROPUESTA] -------------------------------------- */
+  --fuente-titulo: "Archivo", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --fuente-texto: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --titulo-ancho: 62%;             /* font-stretch: versión condensada */
+  --titulo-peso: 850;
+
+  --texto-xs: 0.8125rem;   /* 13 px: notas legales */
+  --texto-s: 0.9375rem;    /* 15 px: etiquetas, chips */
+  --texto-m: 1.0625rem;    /* 17 px: texto corrido */
+  --texto-l: 1.25rem;      /* 20 px: bajadas */
+
+  --titulo-s: clamp(1.5rem, 1.3rem + 0.9vw, 1.875rem);   /* 24-30: tarjetas */
+  --titulo-m: clamp(2.25rem, 1.6rem + 2.9vw, 3.75rem);   /* 36-60: secciones */
+  --titulo-l: clamp(3.25rem, 2rem + 5vw, 6rem);          /* 52-96: portada */
+  --titulo-xl: clamp(6rem, 1rem + 22vw, 17rem);          /* palabra gigante */
+
+  --interlineado-titulo: 0.9;
+  --interlineado-texto: 1.55;
+  --medida-texto: 34rem;           /* largo de línea máximo del texto corrido */
+
+  /* ---- 5. Espaciado (escala de 4 px) ---------------------------------- */
+  --esp-1: 0.25rem;  /* 4 */
+  --esp-2: 0.5rem;   /* 8 */
+  --esp-3: 0.75rem;  /* 12 */
+  --esp-4: 1rem;     /* 16 */
+  --esp-5: 1.5rem;   /* 24 */
+  --esp-6: 2rem;     /* 32 */
+  --esp-7: 3rem;     /* 48 */
+  --esp-8: 4rem;     /* 64 */
+  --esp-9: 6rem;     /* 96 */
+  --margen: clamp(1rem, 0.4rem + 2.6vw, 2.5rem);   /* margen lateral: 16 px en móvil */
+  --ancho-max: 75rem;
+  --toque-min: 2.75rem;            /* 44 px: objetivo táctil mínimo */
+
+  /* ---- 6. Radios ------------------------------------------------------ */
+  --radio-chip: 999px;
+  --radio-foto: 10px;
+  --radio-tarjeta: 14px;
+  --radio-hoja: 24px;
+
+  /* ---- 7. Sombras ----------------------------------------------------- */
+  --sombra-elevada: 0 18px 30px -14px rgb(21 19 21 / 0.38), 0 4px 10px -4px rgb(21 19 21 / 0.16);
+  --sombra-hoja: 0 -12px 40px rgb(21 19 21 / 0.28);
+
+  /* ---- 8. Movimiento [PROPUESTA] -------------------------------------- */
+  --dur-rapida: 120ms;    /* cambios de color en botones */
+  --dur-media: 220ms;     /* tarjetas, pestañas */
+  --dur-lenta: 480ms;     /* entradas de la portada */
+  --curva-salida: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --curva-rebote: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --elevacion-hover: -6px;
+  --zoom-foto: 1.03;
+
+  /* ---- 9. Capas ------------------------------------------------------- */
+  --capa-cabecera: 50;
+  --capa-barra: 60;
+  --capa-hoja: 80;
+}
+
+/* Superficies: cambian los roles de color dentro de cada bloque. */
+.superficie-tinta {
+  --superficie: var(--tinta);
+  --texto: var(--crema);
+  --texto-2: var(--crema-apagada);
+  --borde: rgb(247 240 228 / 0.18);
+  --anillo: var(--turquesa);
+}
+
+.superficie-turquesa {
+  --superficie: var(--turquesa);
+  --texto: var(--tinta);
+  --texto-2: var(--tinta);
+  --borde: rgb(21 19 21 / 0.25);
+  --anillo: var(--tinta);
+}
+
+.superficie-crema {
+  --superficie: var(--crema);
+  --texto: var(--tinta);
+  --texto-2: var(--tinta-suave);
+  --borde: var(--crema-borde);
+  --anillo: var(--tinta);
+}
+
+.superficie-tinta,
+.superficie-turquesa,
+.superficie-crema {
+  background-color: var(--superficie);
+  color: var(--texto);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-rapida: 0ms;
+    --dur-media: 0ms;
+    --dur-lenta: 0ms;
+    --elevacion-hover: 0px;
+    --zoom-foto: 1;
+  }
+}

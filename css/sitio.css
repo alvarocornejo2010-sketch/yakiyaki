@@ -1,0 +1,493 @@
+/* =========================================================================
+   Yakiyaki: estructura de la página (cabecera, secciones, ubicación y pie).
+   Las piezas reutilizables están en componentes.css.
+   ========================================================================= */
+
+:root { --alto-cabecera: 4.25rem; }
+
+html { scroll-padding-top: var(--alto-cabecera); }
+
+/* En celular, la barra fija de abajo: lo que se enfoca con el teclado no queda debajo de ella. */
+@media (max-width: 59.99rem) {
+  html { scroll-padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+}
+
+.saltar {
+  position: absolute;
+  top: -5rem;
+  left: var(--margen);
+  z-index: 100;
+  padding: 0.75rem 1.125rem;
+  border-radius: 8px;
+  background: var(--turquesa);
+  color: var(--tinta);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.saltar:focus { top: 0.5rem; }
+
+.sin-js,
+.aviso-error {
+  margin: 0;
+  padding: var(--esp-3) var(--margen);
+  background: var(--yema);
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+/* ---- Cabecera ------------------------------------------------------------ */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: var(--capa-cabecera);
+  border-bottom: 1px solid rgb(247 240 228 / 0.1);
+}
+
+.cabecera__fila {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-6);
+  min-height: var(--alto-cabecera);
+}
+
+.cabecera__logo {
+  display: block;
+  flex: none;
+  border-radius: 50%;
+}
+
+.cabecera__logo img {
+  width: 2.875rem;
+  rotate: -6deg;
+  transition: rotate var(--dur-media) var(--curva-rebote);
+}
+
+.cabecera__logo:hover img { rotate: 4deg; }
+
+/* Dato extra junto al logo: solo en computadora, donde sobra espacio. */
+.cabecera__extra { display: none; }
+
+@media (min-width: 60rem) {
+  .cabecera__extra:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-5);
+    min-height: 2.5rem;
+    padding-left: var(--esp-5);
+    border-left: 1px solid var(--borde);
+    color: var(--texto-2);
+    font-size: var(--texto-s);
+  }
+}
+
+.cabecera__dato {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: var(--toque-min);
+  color: var(--texto);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cabecera__dato:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--turquesa);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.cabecera__dato .icono { width: 1.125rem; height: 1.125rem; }
+.cabecera__promo b { margin-left: 0.25em; color: var(--coral); font-weight: 800; }
+
+.cabecera__marca {
+  display: grid;
+  line-height: 1.1;
+}
+
+.cabecera__marca b {
+  color: var(--texto);
+  font-family: var(--fuente-titulo);
+  font-size: 1.5rem;
+  font-stretch: var(--titulo-ancho);
+  font-weight: 850;
+}
+
+.cabecera__nav { margin-left: auto; }
+
+.cabecera__nav ul {
+  display: flex;
+  gap: var(--esp-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cabecera__menu { display: none; }
+
+@media (max-width: 59.99rem) {
+  .cabecera__pedir { display: none; }
+
+  .cabecera__menu {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-2);
+    min-height: var(--toque-min);
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--borde);
+    border-radius: var(--radio-chip);
+    background: transparent;
+    color: var(--texto);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .cabecera__menu[aria-expanded="true"] { border-color: var(--turquesa); }
+
+  .cabecera__nav {
+    position: absolute;
+    inset: 100% 0 auto;
+    display: none;
+    margin: 0;
+    padding: var(--esp-2) var(--margen) var(--esp-6);
+    border-bottom: 1px solid rgb(247 240 228 / 0.12);
+    background: var(--tinta);
+    box-shadow: 0 24px 40px rgb(0 0 0 / 0.35);
+  }
+
+  .menu-abierto .cabecera__nav { display: block; }
+
+  .cabecera__nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cabecera__nav .nav-enlace {
+    min-height: 3.5rem;
+    font-family: var(--fuente-titulo);
+    font-size: 2.25rem;
+    font-stretch: var(--titulo-ancho);
+    font-weight: var(--titulo-peso);
+    background-position: 0 calc(100% - 0.4rem);
+  }
+}
+
+/* ---- Portada ---------------------------------------------------------------- */
+.hero { min-height: min(calc(100svh - var(--alto-cabecera)), 52rem); }
+
+/* El sello lleva fondo para leerse aunque quede sobre la foto. */
+.hero .sello { background: var(--tinta); }
+
+/* Nombre de la marca: lo primero que se lee en la portada. */
+.hero__marca {
+  margin: 0;
+  color: var(--turquesa);
+  font-family: var(--fuente-titulo);
+  font-size: clamp(3.75rem, 1.9rem + 6.4vw, 8rem);
+  font-stretch: var(--titulo-ancho);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  animation: marca-entra var(--dur-lenta) var(--curva-salida) both;
+}
+
+@keyframes marca-entra {
+  from { opacity: 0; transform: translateY(0.2em); }
+}
+
+/* Con la marca arriba, la frase baja un escalón. */
+.hero__titulo { font-size: clamp(2.5rem, 1.5rem + 3.4vw, 4.75rem); }
+.hero__titulo .linea > span { animation-delay: 140ms; }
+.hero__titulo .linea:nth-child(2) > span { animation-delay: 240ms; }
+.hero__contenido { gap: var(--esp-4); }
+.hero__contenido .bajada { margin-top: var(--esp-1); }
+.hero__acciones { margin-top: var(--esp-2); }
+
+@media (max-width: 59.99rem) {
+  .hero__plato { top: 2%; right: -12vw; width: min(66vw, 26rem); }
+}
+
+/* ---- Secciones ------------------------------------------------------------- */
+.seccion { padding-block: clamp(4rem, 2.5rem + 5vw, 7.5rem); }
+.seccion--borde { border-top: 1.5px solid var(--borde); }
+
+.seccion__titulo { margin-bottom: var(--esp-6); }
+
+.seccion__cabeza {
+  display: grid;
+  justify-items: start;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-6);
+}
+
+/* Favoritos */
+.rejilla-tickets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--esp-6) var(--esp-4);
+  padding-top: var(--esp-3);
+}
+
+@media (min-width: 60rem) {
+  .rejilla-tickets { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--esp-5); }
+}
+
+/* Nosotros */
+.nosotros {
+  display: grid;
+  gap: var(--esp-5);
+}
+
+.nosotros__titulo { max-width: 20ch; }
+.nosotros .carrusel { margin-top: var(--esp-5); }
+
+@media (min-width: 60rem) {
+  .nosotros {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: end;
+    column-gap: var(--esp-8);
+  }
+
+  .nosotros .carrusel,
+  .nosotros .carrusel__controles { grid-column: 1 / -1; }
+}
+
+/* Carta: toda seguida, en columnas que se llenan solas (1, 2 o 3 según el ancho). */
+.carta {
+  columns: 1;
+  column-gap: var(--esp-8);
+}
+
+@media (min-width: 46rem) { .carta { columns: 2; } }
+@media (min-width: 72rem) { .carta { columns: 3; } }
+
+.carta__categoria {
+  break-inside: avoid;
+  margin-bottom: var(--esp-7);
+}
+
+.carta__titulo {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding-bottom: var(--esp-2);
+  border-bottom: 2.5px solid var(--tinta);
+  font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.375rem);
+}
+
+.carta .plato {
+  padding-block: var(--esp-3) var(--esp-4);
+}
+
+.carta .plato:first-child { border-top: 0; }
+.carta .plato__nombre { font-size: 1.5rem; }
+.carta .precio { font-size: 1.5rem; }
+
+/* ---- Ubicación y pedidos ---------------------------------------------------- */
+.ubicacion {
+  display: grid;
+  gap: var(--esp-7);
+}
+
+@media (min-width: 60rem) {
+  .ubicacion {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: start;
+    column-gap: var(--esp-8);
+  }
+}
+
+.ubicacion__info {
+  display: grid;
+  gap: var(--esp-6);
+}
+
+.ubicacion__info .seccion__cabeza { margin-bottom: 0; }
+
+.ubicacion__subtitulo {
+  margin: 0 0 var(--esp-3);
+  color: var(--texto-2);
+  font-size: var(--texto-s);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ubicacion__direccion {
+  font-size: var(--texto-l);
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.ubicacion__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}
+
+.horario {
+  display: grid;
+  gap: var(--esp-2);
+  max-width: 24rem;
+  margin: 0;
+}
+
+.horario div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--esp-4);
+  padding-bottom: var(--esp-2);
+  border-bottom: 1px solid var(--borde);
+}
+
+.horario dt { font-weight: 700; }
+.horario dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+.superficie-tinta .canal:hover { border-color: var(--turquesa); }
+
+.ubicacion__mapa {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radio-tarjeta);
+  background: var(--tinta-elevada);
+}
+
+@media (min-width: 60rem) {
+  .ubicacion__mapa { position: sticky; top: calc(var(--alto-cabecera) + var(--esp-5)); aspect-ratio: 4 / 5; }
+}
+
+/* Se ve si el mapa tarda o no carga: la dirección sigue a la vista. */
+.ubicacion__mapa-texto {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--esp-5);
+  color: var(--texto-2);
+  text-align: center;
+}
+
+.ubicacion__mapa iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Marcas hermanas */
+.marcas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---- Pie ---------------------------------------------------------------------- */
+.pie {
+  padding-block: var(--esp-8) var(--esp-6);
+  border-top: 1px solid rgb(247 240 228 / 0.12);
+}
+
+.pie__rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  align-items: start;
+  gap: var(--esp-6);
+}
+
+.pie__marca {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+}
+
+.pie__marca img {
+  width: 4rem;
+  rotate: -6deg;
+}
+
+.pie__titulo {
+  margin: 0 0 var(--esp-3);
+  color: var(--texto-2);
+  font-size: var(--texto-s);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pie__texto {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.pie__lista {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pie__red { gap: var(--esp-2); }
+
+.pie__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--esp-3);
+  margin-top: var(--esp-7);
+  padding-top: var(--esp-5);
+  border-top: 1px solid rgb(247 240 228 / 0.12);
+  color: var(--texto-2);
+  font-size: var(--texto-s);
+}
+
+/* En celular, espacio para que la barra fija no tape el final del pie. */
+@media (max-width: 59.99rem) {
+  .pie { padding-bottom: calc(var(--esp-6) + 4.75rem + env(safe-area-inset-bottom)); }
+}
+
+/* ---- Hoja de pedido ----------------------------------------------------------- */
+.hoja__producto {
+  padding: var(--esp-3) var(--esp-4);
+  border-radius: var(--radio-foto);
+  background: var(--yema);
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+.hoja__pie {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+.hoja__otros {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+.hoja__otros-titulo {
+  color: var(--tinta-suave);
+  font-size: var(--texto-s);
+  font-weight: 700;
+}
+
+/* El título de la hoja recibe el foco al abrir (para lectores de pantalla); no necesita anillo. */
+.hoja__cabeza h2:focus { outline: none; }
+
+/* Con pedido armado, el WhatsApp general sobra: el botón Enviar ya lo hace. */
+.hoja--con-pedido [data-canal="whatsapp"] { display: none; }
+
+.yakibox__error {
+  padding: var(--esp-2) var(--esp-3);
+  border-left: 4px solid var(--coral);
+  border-radius: 0 var(--radio-foto) var(--radio-foto) 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-weight: 700;
+}

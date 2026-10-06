@@ -1,0 +1,10 @@
+# Se genera con: python herramientas/publicar.py
+publicar/
+# Registros de pruebas del navegador y caché de graphify
+.playwright-mcp/
+graphify-out/cache/
+__pycache__/
+desktop.ini
+# Rutas de esta computadora (graphify)
+graphify-out/.graphify_python
+graphify-out/.graphify_root

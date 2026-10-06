@@ -5,7 +5,8 @@
 - Agrega la política de seguridad (CSP) y las cabeceras de seguridad (vercel.json).
 
 Uso: python herramientas/publicar.py
-Después: sube la carpeta publicar/ (por ejemplo con "vercel deploy" dentro de ella).
+Deja también yakiyaki-web.zip: la misma web en un archivo comprimido para compartir
+(se descomprime y se abre index.html).
 """
 import datetime
 import json
@@ -209,6 +210,9 @@ def main():
             if r.returncode != 0:
                 raise SystemExit(f"El JS comprimido de {rel} no es válido:\n{r.stderr}")
     print(f"Listo: publicar/ ({antes // 1024} KB de código pasaron a {despues // 1024} KB)")
+    # La misma web en un solo archivo, para compartirla sin servidor ni hosting.
+    zip_ruta = shutil.make_archive(os.path.join(RAIZ, "yakiyaki-web"), "zip", DESTINO)
+    print(f"Listo: {os.path.basename(zip_ruta)} ({os.path.getsize(zip_ruta) // 1024} KB)")
 
 
 if __name__ == "__main__":

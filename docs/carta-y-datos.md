@@ -78,7 +78,7 @@ Fotos en `docs/fotos/carta-del-local/`. Es la carta del propio local, así que r
 - **Karaage:** los tamaños se llaman **personal** y grande (el PDF decía "mediano").
 - **Takoyaki:** sabores original, acevichado y **sweet chili**.
 - **Bebidas:** limorada S/ 5, dalgona S/ 8 (original o decaf), mugicha S/ 5 (hot o iced), té S/ 3 (verde o negro), bobba juice S/ 7, soju soda S/ 10, latte S/ 8 (hot o iced), matcha latte S/ 10.
-- **Sin precio claro en la foto:** americano, ichigo latte y taro latte no tienen su propio cartel de precio (el S/ 10 está junto al matcha latte). En la web salen como "Consultar" hasta confirmarlo.
+- **Precios compartidos:** en la pared, algunos carteles amarillos valen para un grupo de bebidas. El S/ 5.0 está entre el americano y el mugicha, y vale para los dos. El S/ 10.0 está sobre el ichigo latte y el matcha latte, con el taro latte en el mismo grupo, y vale para los tres.
 
 ## Contradicciones y cómo quedaron en la muestra
 
@@ -96,7 +96,7 @@ Al buscar "Calle 31 110, Córpac, San Isidro", Google Maps la ubica como **Jr. C
 
 1. ~~¿El 912 848 007 recibe pedidos por WhatsApp?~~ Sí: el 2026-10-05 pediste usar WhatsApp en vez de llamadas.
 2. ~~¿La carta del PDF está vigente? ¿Sigue el Combo Ramen a S/ 20?~~ Sí, según la carta de la pared (2026-10-07).
-3. ~~Precio del ramen solo, de la Limorada y de las bebidas~~ (carta de la pared). Falta: americano, ichigo latte, taro latte, gaseosas y snacks.
+3. ~~Precio del ramen solo, de la Limorada y de las bebidas~~ (carta de la pared). Gaseosas (S/ 5), tsukemono (S/ 3) y onion rings (S/ 9.90): precios de Rappi del 2026-10-07, porque no están en la carta de la pared.
 4. ¿Hay mesas para comer en el local?
 5. Logo en vector, fotos originales con permiso de uso y la foto nocturna de ramen para la portada.
 6. Enlace de PedidosYa y horario del domingo.

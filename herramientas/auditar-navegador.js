@@ -303,9 +303,17 @@ async (page) => {
     });
 
     await paso('pedido solo con precio a consultar no dice S/ 0', async () => {
+      // Un plato visible sin precio (null); si ya todos tienen precio, la prueba no aplica.
+      const sinPrecio = await page.evaluate(() => (window.YAKI.carta.platos.find((p) => p.visible !== false && p.precio == null &&
+        !(p.variantes && p.variantes.length) && p.categorias.length) || {}).id);
+      if (!sinPrecio) return 'no aplica: todos los platos tienen precio';
       await page.locator('#hoja-pedido [data-vaciar]').click();
       await page.keyboard.press('Escape');
-      await page.locator('#carta [data-agregar="taro-latte"]').click();   // sigue sin precio en la carta
+      await page.locator('#carta [data-agregar="' + sinPrecio + '"]').click();
+      if (await abierto('#hoja-agregar')) {
+        for (const grupo of await page.locator('#hoja-agregar fieldset[data-grupo]').all()) await grupo.locator('label.opcion').first().click();
+        await page.locator('#hoja-agregar [data-agregar-confirmar]').click();
+      }
       await page.locator('.barra-pedido [data-abrir-pedido]').click();
       const m = await mensaje();
       const total = await page.locator('#hoja-pedido .carrito__total').textContent();
@@ -313,8 +321,10 @@ async (page) => {
     });
 
     await paso('el pedido sigue ahí al recargar', async () => {
+      const antes = await page.locator('.cabecera__pedir .contador').textContent();
       await page.reload();
-      return /1/.test(await page.locator('.cabecera__pedir .contador').textContent());
+      const despues = await page.locator('.cabecera__pedir .contador').textContent();
+      return antes && antes === despues ? 'contador: ' + despues.replace(/\D.*$/, '') : false;
     });
 
     await paso('almacenamiento alterado: se descarta lo inválido sin romper nada', async () => {

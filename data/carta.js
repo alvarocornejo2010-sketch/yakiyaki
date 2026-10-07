@@ -6,6 +6,8 @@
    - Precios de platos sueltos, sabores y rellenos: carta del local (PDF).
    - Categorías y descripciones de platos sueltos: su carta en Rappi.
    - Limorada: etiqueta de la botella (póster del Combo 1).
+   - Gaseosas, tsukemono y onion rings: precios de Rappi (2026-10-07), porque no
+     están en la carta de la pared.
    - Carta de la pared del local (fotos del 2026-10-07, en docs/fotos/carta-del-local/):
      precios del ramen, la limorada y las bebidas; tamaños del karaage (personal
      y grande); sabores del takoyaki; el Combo Ramen lleva 3 takoyaki. Confirma
@@ -123,8 +125,7 @@ YAKI.carta = {
     {
       id: 'tsukemono', categorias: ['acompanamientos'], nombre: 'Tsukemono de nabo',
       descripcion: 'Nabo encurtido, 25 g.',
-      precio: null,
-      visible: false                          // [PENDIENTE] solo en Rappi (S/ 3.00); falta precio del local
+      precio: 3                               // precio de Rappi (no está en la carta de la pared)
     },
 
     /* ---- Postres ---- */
@@ -144,8 +145,8 @@ YAKI.carta = {
     },
     {
       id: 'gaseosas', categorias: ['bebidas'], nombre: 'Gaseosas',
-      descripcion: 'Coca-Cola o Inca Kola, original o sin azúcar.',
-      precio: null,                           // [PENDIENTE] precio en el local (Rappi: S/ 5.00)
+      descripcion: 'Coca-Cola o Inca Kola. Original de 600 ml o sin azúcar de 500 ml.',
+      precio: 5,                              // precio de Rappi (no están en la carta de la pared)
       opciones: { titulo: 'Elige', lista: ['Coca-Cola Original', 'Coca-Cola Sin Azúcar', 'Inca Kola Original', 'Inca Kola Sin Azúcar'], elegir: 1 }
     },
     {
@@ -157,7 +158,7 @@ YAKI.carta = {
     {
       id: 'americano', categorias: ['bebidas'], nombre: 'Americano',
       descripcion: 'Hot o iced.',
-      precio: null,                           // [PENDIENTE] en la pared no tiene precio propio
+      precio: 5,                              // en la pared, el S/ 5.0 está entre americano y mugicha
       opciones: { titulo: 'Elige', lista: ['Hot', 'Iced'], elegir: 1 }
     },
     {
@@ -196,20 +197,19 @@ YAKI.carta = {
     {
       id: 'ichigo-latte', categorias: ['bebidas'], nombre: 'Ichigo latte',
       descripcion: 'Latte de fresa.',
-      precio: null                            // [PENDIENTE] en la pared el S/ 10 está junto al matcha latte
+      precio: 10                              // en la pared, un solo S/ 10.0 para ichigo, matcha y taro latte
     },
     {
       id: 'taro-latte', categorias: ['bebidas'], nombre: 'Taro latte',
       descripcion: 'Latte de taro.',
-      precio: null                            // [PENDIENTE] en la pared no tiene precio propio
+      precio: 10                              // en la pared, un solo S/ 10.0 para ichigo, matcha y taro latte
     },
 
     /* ---- Sin categoría publicada ---- */
     {
       id: 'onion-rings', categorias: ['snacks'], nombre: 'Onion rings',
       descripcion: 'Aros de cebolla crujientes.',
-      precio: null,
-      visible: false                          // [PENDIENTE] Rappi: S/ 9.90; la lista de snacks cambia
+      precio: 9.90                            // precio de Rappi
     }
   ],
 

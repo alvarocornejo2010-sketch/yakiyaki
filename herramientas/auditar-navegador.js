@@ -11,11 +11,11 @@
      enfocado puede quedar debajo de la cabecera o de la barra inferior.
 
    Uso: con el servidor local encendido y la página abierta en
-   http://localhost:8160/ (código) o http://localhost:8161/ (versión publicada),
+   http://localhost:8160/ (código) o http://localhost:8161/ (versión publicada) o la dirección en internet,
    ejecutar este archivo con Playwright (browser_run_code con este archivo).
    Devuelve un informe: lo que dice "FALLA" o aparece en una lista es un error. */
 async (page) => {
-  const base = /^http:\/\/(localhost|127\.0\.0\.1):\d+\//.test(page.url())
+  const base = /^https?:\/\/[^/]+\//.test(page.url())
     ? page.url().replace(/[?#].*$/, '')
     : 'http://localhost:8160/index.html';
 
@@ -305,7 +305,7 @@ async (page) => {
     await paso('pedido solo con precio a consultar no dice S/ 0', async () => {
       await page.locator('#hoja-pedido [data-vaciar]').click();
       await page.keyboard.press('Escape');
-      await page.locator('#carta [data-agregar="limorada"]').click();
+      await page.locator('#carta [data-agregar="taro-latte"]').click();   // sigue sin precio en la carta
       await page.locator('.barra-pedido [data-abrir-pedido]').click();
       const m = await mensaje();
       const total = await page.locator('#hoja-pedido .carrito__total').textContent();

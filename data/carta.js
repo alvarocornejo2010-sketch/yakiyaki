@@ -6,6 +6,10 @@
    - Precios de platos sueltos, sabores y rellenos: carta del local (PDF).
    - Categorías y descripciones de platos sueltos: su carta en Rappi.
    - Limorada: etiqueta de la botella (póster del Combo 1).
+   - Carta de la pared del local (fotos del 2026-10-07, en docs/fotos/carta-del-local/):
+     precios del ramen, la limorada y las bebidas; tamaños del karaage (personal
+     y grande); sabores del takoyaki; el Combo Ramen lleva 3 takoyaki. Confirma
+     los precios del PDF (12.90, 5, 6, 15, 20).
 
    Cada plato tiene:
      id          nombre corto sin espacios (no cambiar: lo usan favoritos, combos y el pedido)
@@ -17,7 +21,7 @@
      foto/poster imagen (opcional)
      visible     false = no se muestra (platos sin datos confirmados)
 
-   [PENDIENTE] vigencia de los precios: la carta del PDF no tiene fecha.
+   Los precios del PDF coinciden con la carta de la pared (2026-10-07).
    ========================================================================= */
 window.YAKI = window.YAKI || {};
 
@@ -27,6 +31,7 @@ YAKI.carta = {
     { id: 'combos', nombre: 'Combos' },
     { id: 'entradas', nombre: 'Entradas' },
     { id: 'pollo-frito', nombre: 'Pollo frito' },
+    { id: 'ramen', nombre: 'Ramen' },
     { id: 'acompanamientos', nombre: 'Acompañamientos' },
     { id: 'postres', nombre: 'Postres' },
     { id: 'bebidas', nombre: 'Bebidas' },
@@ -52,7 +57,7 @@ YAKI.carta = {
     },
     {
       id: 'combo-ramen', categorias: ['combos'], nombre: 'Combo Ramen',
-      descripcion: 'Incluye 1 ramen picante o normal y 1 porción pequeña de takoyaki.',
+      descripcion: 'Ramen + 3 takoyaki. El ramen puede ser picante o normal.',
       precio: 20,
       opciones: { titulo: 'Ramen', lista: ['Picante', 'Normal'], elegir: 1 },
       foto: { src: 'img/carta/ramen-cerca', ancho: 505, alto: 505, alt: 'Ramen con gyoza, huevo, nori y cebolla china' }
@@ -75,7 +80,7 @@ YAKI.carta = {
       id: 'takoyaki', categorias: ['entradas'], nombre: 'Takoyaki',
       descripcion: '8 piezas. Masitas fritas rellenas de pulpo y verduras, con salsas y toppings.',
       precio: 12.90,
-      opciones: { titulo: 'Sabor', lista: ['Original', 'Acevichado'], elegir: 1 },
+      opciones: { titulo: 'Sabor', lista: ['Original', 'Acevichado', 'Sweet chili'], elegir: 1 },
       foto: { src: 'img/carta/takoyaki', ancho: 800, alto: 800, alt: 'Takoyaki con salsa, mayonesa y hojuelas de bonito', chica: true }
     },
     {
@@ -95,11 +100,18 @@ YAKI.carta = {
     {
       id: 'karaage', categorias: ['pollo-frito'], nombre: 'Karaage',
       descripcion: 'Pollo frito estilo japonés, salsa a elegir.',
-      variantes: [ { nombre: 'Mediano', precio: 12.90 }, { nombre: 'Grande', precio: 19.90 } ],
+      variantes: [ { nombre: 'Personal', precio: 12.90 }, { nombre: 'Grande', precio: 19.90 } ],
       opciones: { titulo: 'Sabor', lista: ['Original', 'Honey mustard', 'Acevichado', 'Sweet chili'], elegir: 1 },
       foto: { src: 'img/carta/karaage-sweet-chili', ancho: 800, alto: 800, alt: 'Karaage con salsa sweet chili y ajonjolí', chica: true }
     },
 
+    /* ---- Ramen ---- */
+    {
+      id: 'ramen', categorias: ['ramen'], nombre: 'Ramen',
+      descripcion: 'Picante o normal.',
+      precio: 15,
+      opciones: { titulo: 'Elige', lista: ['Picante', 'Normal'], elegir: 1 }
+    },
     /* ---- Acompañamientos ---- */
     {
       id: 'gohan', categorias: ['acompanamientos'], nombre: 'Gohan',
@@ -128,7 +140,7 @@ YAKI.carta = {
     {
       id: 'limorada', categorias: ['bebidas'], nombre: 'Limorada',
       descripcion: 'Limonada + té de butterfly pea. 500 ml.',
-      precio: null                            // [PENDIENTE] precio en el local (Rappi: S/ 6.00)
+      precio: 5                               // carta de la pared (en Rappi: S/ 6.00)
     },
     {
       id: 'gaseosas', categorias: ['bebidas'], nombre: 'Gaseosas',
@@ -137,19 +149,62 @@ YAKI.carta = {
       opciones: { titulo: 'Elige', lista: ['Coca-Cola Original', 'Coca-Cola Sin Azúcar', 'Inca Kola Original', 'Inca Kola Sin Azúcar'], elegir: 1 }
     },
     {
-      id: 'bebidas-especiales', categorias: ['bebidas'], nombre: 'Bebidas especiales',
-      descripcion: 'Matcha latte, ichigo latte, dalgona y bebidas con perlas.',
-      precio: null,
-      visible: false                          // [PENDIENTE] solo vistas en Instagram, sin precio
+      id: 'dalgona', categorias: ['bebidas'], nombre: 'Dalgona',
+      descripcion: 'Original o decaf.',
+      precio: 8,
+      opciones: { titulo: 'Elige', lista: ['Original', 'Decaf'], elegir: 1 }
+    },
+    {
+      id: 'americano', categorias: ['bebidas'], nombre: 'Americano',
+      descripcion: 'Hot o iced.',
+      precio: null,                           // [PENDIENTE] en la pared no tiene precio propio
+      opciones: { titulo: 'Elige', lista: ['Hot', 'Iced'], elegir: 1 }
+    },
+    {
+      id: 'mugicha', categorias: ['bebidas'], nombre: 'Mugicha',
+      descripcion: 'Hot o iced.',
+      precio: 5,
+      opciones: { titulo: 'Elige', lista: ['Hot', 'Iced'], elegir: 1 }
+    },
+    {
+      id: 'te', categorias: ['bebidas'], nombre: 'Té',
+      descripcion: 'Verde o negro.',
+      precio: 3,
+      opciones: { titulo: 'Elige', lista: ['Verde', 'Negro'], elegir: 1 }
+    },
+    {
+      id: 'bobba-juice', categorias: ['bebidas'], nombre: 'Bobba juice',
+      descripcion: 'Jugo con perlas de bobba.',
+      precio: 7
+    },
+    {
+      id: 'soju-soda', categorias: ['bebidas'], nombre: 'Soju soda',
+      descripcion: 'Soju con soda.',
+      precio: 10
+    },
+    {
+      id: 'latte', categorias: ['bebidas'], nombre: 'Latte',
+      descripcion: 'Hot o iced.',
+      precio: 8,
+      opciones: { titulo: 'Elige', lista: ['Hot', 'Iced'], elegir: 1 }
+    },
+    {
+      id: 'matcha-latte', categorias: ['bebidas'], nombre: 'Matcha latte',
+      descripcion: 'Latte de matcha.',
+      precio: 10
+    },
+    {
+      id: 'ichigo-latte', categorias: ['bebidas'], nombre: 'Ichigo latte',
+      descripcion: 'Latte de fresa.',
+      precio: null                            // [PENDIENTE] en la pared el S/ 10 está junto al matcha latte
+    },
+    {
+      id: 'taro-latte', categorias: ['bebidas'], nombre: 'Taro latte',
+      descripcion: 'Latte de taro.',
+      precio: null                            // [PENDIENTE] en la pared no tiene precio propio
     },
 
     /* ---- Sin categoría publicada ---- */
-    {
-      id: 'ramen', categorias: [], nombre: 'Ramen',
-      descripcion: 'Picante o normal.',
-      precio: null,
-      visible: false                          // [PENDIENTE] precio del ramen solo
-    },
     {
       id: 'onion-rings', categorias: ['snacks'], nombre: 'Onion rings',
       descripcion: 'Aros de cebolla crujientes.',

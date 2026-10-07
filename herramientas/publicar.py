@@ -2,7 +2,8 @@
 
 - Copia solo los archivos públicos (nada de docs/, herramientas/ ni la muestra).
 - Comprime HTML, CSS y JS y quita comentarios y notas internas.
-- Agrega la política de seguridad (CSP) y las cabeceras de seguridad (vercel.json).
+- Agrega la política de seguridad (CSP) y las cabeceras de seguridad:
+  vercel.json para Vercel y _headers para Cloudflare Pages (las mismas).
 
 Uso: python herramientas/publicar.py
 Después: sube la carpeta publicar/ (por ejemplo con "vercel deploy" dentro de ella).
@@ -169,6 +170,8 @@ def vaciar(carpeta):
     una carpeta abierta en el Explorador, una terminal o un servidor."""
     os.makedirs(carpeta, exist_ok=True)
     for nombre in os.listdir(carpeta):
+        if nombre == ".vercel":
+            continue  # vínculo con el proyecto de Vercel: se conserva entre publicaciones
         dentro = os.path.join(carpeta, nombre)
         if os.path.isdir(dentro) and not os.path.islink(dentro):
             shutil.rmtree(dentro)
@@ -198,6 +201,8 @@ def main():
         os.makedirs(os.path.dirname(destino), exist_ok=True)
         shutil.copyfile(os.path.join(RAIZ, rel), destino)
     escribir("robots.txt", "User-agent: *\nAllow: /\n")
+    # Cloudflare Pages lee las cabeceras de _headers; Vercel, de vercel.json.
+    escribir("_headers", "/*\n" + "".join(f"  {k}: {v}\n" for k, v in CABECERAS))
     escribir("vercel.json", json.dumps({
         "cleanUrls": True,
         "headers": [{"source": "/(.*)", "headers": [{"key": k, "value": v} for k, v in CABECERAS]}],

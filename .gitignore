@@ -8,3 +8,5 @@ desktop.ini
 # Rutas de esta computadora (graphify)
 graphify-out/.graphify_python
 graphify-out/.graphify_root
+# Caché local de Cloudflare (wrangler)
+.wrangler/

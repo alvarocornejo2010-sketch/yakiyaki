@@ -68,13 +68,25 @@ La web usa solo información real del local, sin reinterpretar:
 - **Categorías y descripciones de platos sueltos:** su carta en Rappi (Combos, Entradas, Pollo frito, Acompañamientos, Postres, Bebidas).
 - **Textos de la portada, YakiBox y Nosotros:** tu PDF de marca, el catálogo y la bio de Instagram.
 
+## Carta de la pared del local (fotos del 2026-10-07)
+
+Fotos en `docs/fotos/carta-del-local/`. Es la carta del propio local, así que resuelve dudas del PDF y de Rappi:
+
+- **Los precios del PDF siguen vigentes:** takoyaki, gyoza, ebi furai y karaage personal S/ 12.90; karaage grande S/ 19.90; nori rice y yakimeshi S/ 5; taiyaki S/ 6; Yakibox S/ 15; combo ramen S/ 20.
+- **Ramen solo:** S/ 15. Ya se muestra en la carta.
+- **Combo ramen:** "ramen + 3 takoyaki".
+- **Karaage:** los tamaños se llaman **personal** y grande (el PDF decía "mediano").
+- **Takoyaki:** sabores original, acevichado y **sweet chili**.
+- **Bebidas:** limorada S/ 5, dalgona S/ 8 (original o decaf), mugicha S/ 5 (hot o iced), té S/ 3 (verde o negro), bobba juice S/ 7, soju soda S/ 10, latte S/ 8 (hot o iced), matcha latte S/ 10.
+- **Sin precio claro en la foto:** americano, ichigo latte y taro latte no tienen su propio cartel de precio (el S/ 10 está junto al matcha latte). En la web salen como "Consultar" hasta confirmarlo.
+
 ## Contradicciones y cómo quedaron en la muestra
 
-1. **Fecha de la carta:** no tiene. El Combo Ramen dice "ex-combo agosto-septiembre-octubre". Se usa, pero hay que confirmar.
+1. **Fecha de la carta:** no tiene, pero la carta de la pared (2026-10-07) confirma los mismos precios.
 2. **"Comer aquí":** el PDF lo dice y la web lo usa tal cual; su Instagram solo dice delivery y take out. Falta confirmar si hay mesas.
 3. **"Onigiris":** el PDF los nombra; su carta los llama "Gohan, bolas de arroz". En la muestra: "Gohan", en la pestaña "Arroz".
 4. **"Pedir para compartir":** el PDF lo pide para la YakiBox, pero la YakiBox es individual. En la muestra: "Pedir mi YakiBox".
-5. **Sabores de takoyaki:** la carta dice Original y Acevichado; un post de TikTok también nombraba Sweet chilli.
+5. **Sabores de takoyaki:** la carta del PDF dice Original y Acevichado; la carta de la pared agrega Sweet chili, y la web ya lo incluye.
 
 ## Dirección en Google Maps (visto el 2026-10-05)
 
@@ -83,8 +95,8 @@ Al buscar "Calle 31 110, Córpac, San Isidro", Google Maps la ubica como **Jr. C
 ## Preguntas para el negocio
 
 1. ~~¿El 912 848 007 recibe pedidos por WhatsApp?~~ Sí: el 2026-10-05 pediste usar WhatsApp en vez de llamadas.
-2. ¿La carta del PDF está vigente? ¿Sigue el Combo Ramen a S/ 20?
-3. Precio del ramen solo, de la Limorada, de las bebidas especiales y de los snacks.
+2. ~~¿La carta del PDF está vigente? ¿Sigue el Combo Ramen a S/ 20?~~ Sí, según la carta de la pared (2026-10-07).
+3. ~~Precio del ramen solo, de la Limorada y de las bebidas~~ (carta de la pared). Falta: americano, ichigo latte, taro latte, gaseosas y snacks.
 4. ¿Hay mesas para comer en el local?
 5. Logo en vector, fotos originales con permiso de uso y la foto nocturna de ramen para la portada.
 6. Enlace de PedidosYa y horario del domingo.

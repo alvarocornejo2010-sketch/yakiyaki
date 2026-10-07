@@ -250,7 +250,7 @@ def revisar_js(carpeta):
 
 
 # ------------------------------------------------------------ publicar -----
-PERMITIDOS = re.compile(r"^(index\.html|404\.html|robots\.txt|vercel\.json|css/[\w-]+\.css|js/[\w-]+\.js|data/[\w-]+\.js|img/[\w/-]+\.(webp|svg|png|jpg))$")
+PERMITIDOS = re.compile(r"^(index\.html|404\.html|robots\.txt|vercel\.json|_headers|css/[\w-]+\.css|js/[\w-]+\.js|data/[\w-]+\.js|img/[\w/-]+\.(webp|svg|png|jpg))$")
 
 
 def revisar_publicar():
@@ -258,7 +258,8 @@ def revisar_publicar():
     if not os.path.isdir(base):
         falla("publicar", "no existe la carpeta publicar/ (corre herramientas/publicar.py)")
         return
-    for raiz, _, archivos in os.walk(base):
+    for raiz, carpetas, archivos in os.walk(base):
+        carpetas[:] = [c for c in carpetas if c != ".vercel"]  # vínculo local con Vercel: la CLI no lo sube
         for a in archivos:
             rel = os.path.relpath(os.path.join(raiz, a), base).replace(os.sep, "/")
             if not PERMITIDOS.match(rel):
@@ -283,6 +284,14 @@ def revisar_publicar():
             falla("publicar", f"la CSP no tiene {directiva}")
     if "unsafe-inline" in csp or "unsafe-eval" in csp:
         falla("publicar", "la CSP permite código en línea (unsafe-inline/unsafe-eval)")
+    # Cloudflare Pages: _headers debe traer exactamente las mismas cabeceras que vercel.json.
+    try:
+        lineas = open(os.path.join(base, "_headers"), encoding="utf-8").read().splitlines()
+        otras = {l.split(":", 1)[0].strip().lower(): l.split(":", 1)[1].strip() for l in lineas[1:] if ":" in l}
+        if lineas[0] != "/*" or otras != cabeceras:
+            falla("publicar", "_headers (Cloudflare) no coincide con las cabeceras de vercel.json")
+    except (OSError, IndexError) as e:
+        falla("publicar", f"_headers (Cloudflare) no válido: {e}")
     revisar_html("publicar/index.html", publicado=True)
     revisar_css("publicar")
     revisar_js("publicar")
